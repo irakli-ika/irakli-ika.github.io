@@ -6,3 +6,6 @@ h1{
     font-size: 5rem;
     color: rgb(172, 49, 21);
 }
+img {
+    width: 100%;
+}
