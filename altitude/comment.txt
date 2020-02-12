@@ -1,2 +1,0 @@
-index.html -> chaamate div da display flax;
-style.css -> moshale paddingebi moshale basis;
