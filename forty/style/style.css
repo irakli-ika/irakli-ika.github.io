@@ -1,6 +1,5 @@
 @import 'reset.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400&display=swap');
-@import 'media.css';
 /*? end import files */
 
 body,
@@ -25,10 +24,6 @@ header {
 }
 .row {
     display: flex;
-}
-.header__container {
-    max-width: 1000px;
-    margin: auto;
 }
 .desc {
     position: absolute;
@@ -57,12 +52,21 @@ header {
 /*? end section elements */
 .section-row__col img {
     display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    max-height: 20rem;
-    min-height: 20rem;
+    object-fit: cover;
+    height: 30rem;
     width: 100%;
+}
+.section-row .section-row__col:first-child {
+    width: 40%;
+}
+.section-row .section-row__col:last-child {
+    width: 60%;
+}
+.section-row:nth-child(even) .section-row__col:first-child {
+    width: 60%;
+}
+.section-row:nth-child(even) .section-row__col:last-child {
+    width: 40%;
 }
 .section-row__col {
     position: relative;
@@ -126,6 +130,11 @@ header {
     padding-top: 1rem;
 }
 
-/* !.tiles article:nth-child(6n - 5):before {
-    !background-color: #6fc3df;
-    !} */
+
+/* .tiles article:nth-child(6n - 5):before {
+    background-color: #6fc3df;
+} */
+
+/*? https://css-tricks.com/examples/nth-child-tester/ */
+/*? https://css-tricks.com/useful-nth-child-recipies/*/
+

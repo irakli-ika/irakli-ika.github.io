@@ -6,9 +6,6 @@
     .section-row__col {
         flex-grow: 1;
     }
-    .section-row__col img {
-        max-height: 40rem !important;
-    }
     .section-row__col .desc {
         left: 50%;
         right: 50%;
