@@ -1,0 +1,27 @@
+@media (max-width: 1205px) {
+    .header-desc__row p,
+    .section-row {
+        flex-wrap: wrap;
+    }
+    .section-row__col {
+        flex-grow: 1;
+    }
+    .section-row__col img {
+        max-height: 40rem !important;
+    }
+    .section-row__col .desc {
+        left: 50%;
+        right: 50%;
+        max-width: 100%;
+        height: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .section-row__col .desc h3 {
+        max-width: 100% !important;
+        font-size: 3rem !important;
+    }
+    .section-row__col .desc p {
+        font-size: 1rem !important;
+    }
+}
+/*? end media query */
