@@ -7,13 +7,13 @@
         <title>DropDownMenu</title>
     </head>
     <body>
-        <ul class="main-nav">
+        <!-- <ul class="main-nav">
             <li class="main-nav__item">
                 <a href="#">home</a>
             </li>
             <li class="main-nav__item">
-                <a href="#modal">category</a>
-                <ul class="sub-nav" id="modal">
+                <a href="#category">category</a>
+                <ul class="sub-nav modal" id="category">
                     <li class="sub-nav__item">
                         <a href="#">category1</a>
                     </li>
@@ -24,13 +24,24 @@
                         <a href="#">category3</a>
                     </li>
                     <li class="sub-nav__item">
-                        <a href="#">category4</a>
+                        <a href="#category_child">category4</a>
+                        <ul class="sub-nav__item-child" id="category_child">
+                            <li>
+                                <a href="#">cat1</a>
+                            </li>
+                            <li>
+                                <a href="#">cat1</a>
+                            </li>
+                            <li>
+                                <a href="#">cat1</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
             <li class="main-nav__item">
-                <a href="#modal">news</a>
-                <ul class="sub-nav modal " id="modal">
+                <a href="#news">news</a>
+                <ul class="sub-nav modal" id="news">
                     <li class="sub-nav__item">
                         <a href="#">news1</a>
                     </li>
@@ -48,10 +59,52 @@
             <li class="main-nav__item">
                 <a href="#">about us</a>
             </li>
-        </ul><!--? end main-nav -->
-        <div class="main">
-            <a href="#modal">link1</a>
-            <div id="modal">modal-target</div>
-        </div>
+        </ul><? end main-nav -->
+        <div class="container">
+            <ul class="main-nav">
+                <li class="home">
+                    <a href="#">home</a>
+                </li>
+                <li class="categoty">
+                    <input type="checkbox" id="main-nav__category" name="nav">
+                    <label for="main-nav__category"><a href="#">category</a></label>
+                    <ul class="sub-nav sub-nav__category">
+                        <li>
+                            <a href="#">category1</a>
+                        </li>
+                        <li>
+                            <a href="#">category2</a>
+                        </li>
+                        <li>
+                            <a href="#">category3</a>
+                        </li>
+                        <li>
+                            <a href="#">category4</a>
+                        </li>
+                    </ul><!--? end sub-nav-->
+                </li><!--? end category -->
+                <li class="news">
+                    <input type="checkbox" id="main-nav__news" name="nav">
+                    <label for="main-nav__news"><a href="#">news</a></label>
+                    <ul class="sub-nav sub-nav__news">
+                        <li>
+                            <a href="#">news1</a>
+                        </li>
+                        <li>
+                            <a href="#">news2</a>
+                        </li>
+                        <li>
+                            <a href="#">news3</a>
+                        </li>
+                        <li>
+                            <a href="#">news4</a>
+                        </li>
+                    </ul><!--? end sub-nav__news -->
+                </li><!--? end news-->
+                <li class="about">
+                    <a href="#">about us</a>
+                </li><!--? end about -->
+            </ul><!--? end main-nav -->
+        </div><!--? end container -->
     </body>
 </html>

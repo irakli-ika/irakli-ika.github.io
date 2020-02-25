@@ -1,20 +1,20 @@
 @media (max-width: 1205px) {
-    .header-desc__row > a,
+    .header-desc__row p,
     .section-row {
         flex-wrap: wrap;
     }
-    /* .section-row__col {
+    .section-row__col {
         flex-grow: 1;
-    } */
+    }
     .section-row__col .desc {
         left: 50%;
         right: 50%;
-        width: 100%;
+        max-width: 100%;
         height: 50%;
         transform: translate(-50%, -50%);
     }
     .section-row__col .desc h3 {
-        width: 100% !important;
+        max-width: 100% !important;
         font-size: 3rem !important;
     }
     .section-row__col .desc p {
