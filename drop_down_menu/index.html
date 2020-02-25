@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/index.css">
+        <title>DropDownMenu</title>
+    </head>
+    <body>
+        <ul class="main-nav">
+            <li class="main-nav__item">
+                <a href="#">home</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="#modal">category</a>
+                <ul class="sub-nav" id="modal">
+                    <li class="sub-nav__item">
+                        <a href="#">category1</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">category2</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">category3</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">category4</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-nav__item">
+                <a href="#modal">news</a>
+                <ul class="sub-nav modal " id="modal">
+                    <li class="sub-nav__item">
+                        <a href="#">news1</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">news2</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">news3</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="#">news4</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-nav__item">
+                <a href="#">about us</a>
+            </li>
+        </ul><!--? end main-nav -->
+
+
+
+        <div class="main">
+            <a href="#modal">link1</a>
+            <div id="modal">modal-target</div>
+        </div>
+    </body>
+</html>

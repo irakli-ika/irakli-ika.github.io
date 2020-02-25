@@ -1,0 +1,141 @@
+@import 'reset.css';
+@import 'var.css';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
+/*? end import files */
+
+html {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    background-color: hsl(231, 13%, 39%);
+}
+header{
+    background-color: hsl(230, 13%, 35%);
+}
+h2 {
+    font-size: 1.75rem;
+    letter-spacing: .1rem;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    line-height: 180%;
+    font-weight: 600;
+    padding: .7rem 2rem;
+    border-radius: 30px; 
+}
+img {
+    display: block;
+    width: 100%;
+}
+.row {
+    display: flex;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+.header-row__col-left {
+    display: flex;
+    flex-direction: column;
+    /* width: 40%; */
+    text-align: center;
+}
+
+.header-row__col-right {
+    /* width: 60%; */
+    flex-grow: 0;
+}
+.desc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.desc h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: .2rem;
+    color: hsl(0, 100%, 100%);
+}
+.desc p {
+    line-height: 1.5rem;
+    color: hsla(0, 100%, 100%, 0.75);
+    /* width: 70%; */
+    margin: 0 auto 1.5rem;
+}
+.desc a {
+    margin-bottom: 2rem;
+    color: hsl(0, 100%, 100%);
+    box-shadow: 0px 0px 3em 0px hsl(0, 0%, 0%, 0.1);
+    transition: background-color .4s;
+}
+.desc-up {
+    background-color: hsl(184, 40%, 50%);
+}
+.desc-down {
+    background-color: hsl(163, 46%, 60%);
+}
+.desc-up a{
+    background-color: hsl(184, 43%, 55%);
+}
+.desc-down a {
+    background-color: hsl(163, 49%, 65%);
+}
+.desc-up a:hover {
+    background-color: hsl(183, 43%, 60%);
+}
+.desc-down a:hover {
+    background-color: hsl(163, 48%, 70%);
+}
+
+/*? start wrapper */
+.wrapper h3 {
+    color: hsl(var(--color-grey));
+    margin-bottom: 1.5rem;
+}
+.wrapper p {
+    color: hsl(var(--color-grey), 0.5);
+}
+.wrapper-title {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.wrapper-row__col {
+    border-right: 1px solid hsl(var(--color-grey), 0.5);
+    margin-right: 1rem;
+}
+.wrapper-row__col:last-child {
+    border-right: 0;
+    margin-right: 0;
+}
+.main-row-white {
+    background-color: hsl(0, 100%, 100%);
+}
+.main-row {
+    flex-direction: column;
+}
+.title__child > p{
+    color: hsl(var(--color-grey), 0.5);
+    padding-top: 1rem;
+}
+.title__child > h2 {
+    color: hsl(var(--color-grey));
+}
+.wrapper-row {
+    display: flex;
+}
+.align-center {
+        padding: 0 6em 4em 6em;
+}
+.wrapper-row__col {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 3rem 2rem 3rem 0;
+}

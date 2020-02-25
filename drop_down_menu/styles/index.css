@@ -1,0 +1,51 @@
+@import 'import.css';
+/*? end import file */
+
+
+.main-nav {
+    display: flex;
+    max-width: 1200px;
+    margin: 25px auto;
+    text-align: center;
+}
+.main-nav:target {
+    visibility: visible;
+}
+li {
+    list-style-type: none;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: hsl(125, 100%, 36%);
+    font-weight: 700;
+}
+.main-nav {
+    background-color: rgb(2, 104, 138);
+    padding: 15px;
+}
+.main-nav__item {
+    flex-grow: 1;
+}
+
+/*? end main-nav */
+/*? start sub-nav */
+.sub-nav {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: color 1s, opacity 1s;
+}
+.sub-nav:target {
+    visibility: visible;
+}
+
+/*! ------------------------------- */
+
+.main div {
+    display: none;
+}
+.main div:target {
+    display: table;
+}
