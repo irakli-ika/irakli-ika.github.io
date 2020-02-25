@@ -1,8 +1,20 @@
 body {
     background-color: rgb(143, 134, 134);
 }
+li {
+    list-style-type: none;
+    margin: 3px;
+    max-width: 30%;
+    text-align: center;
+}
 a {
+    display: block;
     font-size: 3rem;
     text-decoration: none;
-    color: rgb(93, 196, 93);
+    color: rgb(93, 129, 196);
+    background-color: rgb(167, 142, 0);
+    border-radius: 5px;
+}
+a:hover {
+    background-color: rgba(167, 142, 0, 0.699);
 }

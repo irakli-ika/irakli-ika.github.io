@@ -66,19 +66,32 @@ a {
     visibility: hidden;
 } */
 
-
-
 .container {
     max-width: 1000px;
     margin: 25px auto;
 }
 .main-nav {
     display: flex;
-    background-color: rgb(130, 70, 190);
     text-align: center;
 }
 .main-nav > li {
     flex-grow: 1;
+}
+.main-nav > li:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.main-nav > li:last-child {
+    border-radius: 0 10px 10px 0;
+}
+.main-nav > li:hover,
+.sub-nav > li:hover,
+.sub-nav__child > li:hover {
+    background-color: rgba(130, 70, 190, 0.87);
+}
+ .main-nav > li,
+ .sub-nav > li,
+ .sub-nav__child > li{
+    background-color: rgb(130, 70, 190);
 }
 input[type="checkbox"] {
     display: none;
@@ -86,27 +99,68 @@ input[type="checkbox"] {
 li {
     list-style-type: none;
 }
-a {
+a,
+label {
     display: block;
     text-decoration: none;
     font-size: 20px;
     padding: 15px;
+    color: rgb(107, 199, 2);
+    cursor: pointer;
+    text-transform: capitalize;
 }
-.category {
+.position {
     position: relative;
 }
-.sub-nav__news {
+/*? start sub-nav */
+.sub-nav {
     position: absolute;
     left: 0;
-    right: 100%;
-    width: 100%;
-}
-/* .sub-nav {
-    position: absolute;
-    left: 0;
+    top: 100%;
     width: 100%;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-100%) rotate(360deg) scale(0);
-    transition: visibility 1s, opacity 1s, transform 1s;
-} */
+    transform: translateY(-125%) scale(0);
+    transition: transform 1s, opacity 2s;
+}
+.sub-nav > li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+input[type="checkbox"]:checked ~ .sub-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+/*? start sub-nav__child */
+.sub-nav__child {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%) scale(0);
+    transition: transform 2s, opacity 1s;
+    right: 100%;
+    width: 100%;
+}
+.sub-nav__child > li:first-child {
+    border-radius: 10px 0 0 0;
+}
+.sub-nav__child > li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+.child-category-four > li {
+    border-radius: 10px 0 10px 10px !important;
+}
+.child-category-two {
+    top: 25%;
+}
+.child-category-three {
+    top: 50%;
+}
+.child-category-four {
+    top: 75%;
+}
+.category-hover:hover .sub-nav__child {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+}

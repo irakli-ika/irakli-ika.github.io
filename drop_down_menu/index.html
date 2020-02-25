@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/index.css">
-        <title>DropDownMenu</title>
+        <title>Drop_Down_Menu</title>
     </head>
     <body>
         <!-- <ul class="main-nav">
@@ -64,28 +64,52 @@
             <ul class="main-nav">
                 <li class="home">
                     <a href="#">home</a>
-                </li>
-                <li class="categoty">
+                </li><!--? end home -->
+                <li class="category position">
                     <input type="checkbox" id="main-nav__category" name="nav">
-                    <label for="main-nav__category"><a href="#">category</a></label>
+                    <label for="main-nav__category">category</label>
                     <ul class="sub-nav sub-nav__category">
                         <li>
                             <a href="#">category1</a>
-                        </li>
-                        <li>
+                        </li><!--? end category1 -->
+                        <li class="category-hover">
                             <a href="#">category2</a>
-                        </li>
-                        <li>
+                            <ul class="sub-nav__child sub-categoty__child child-category-two">
+                                <li>
+                                    <a href="#">cat1</a>
+                                </li>
+                                <li>
+                                    <a href="#">cat2</a>
+                                </li>
+                                <li>
+                                    <a href="#">cat3</a>
+                                </li>
+                            </ul><!--? end first sub-nav_child for category -->
+                        </li><!--? end category2 -->
+                        <li class="category-hover">
                             <a href="#">category3</a>
-                        </li>
-                        <li>
+                            <ul class="sub-nav__child sub-category__child child-category-three">
+                                <li>
+                                    <a href="#">cat1</a>
+                                </li>
+                                <li>
+                                    <a href="#">cat2</a>
+                                </li>
+                            </ul><!--? end second sub-nav_child for category -->
+                        </li><!--? end category3 -->
+                        <li class="category-hover">
                             <a href="#">category4</a>
-                        </li>
-                    </ul><!--? end sub-nav-->
+                            <ul class="sub-nav__child sub-category__child child-category-four">
+                                <li>
+                                    <a href="#">cat1</a>
+                                </li>
+                            </ul><!--? end third sub-nav_child for category -->
+                        </li><!--? end category4 -->
+                    </ul><!--? end sub-nav -->
                 </li><!--? end category -->
-                <li class="news">
+                <li class="news position">
                     <input type="checkbox" id="main-nav__news" name="nav">
-                    <label for="main-nav__news"><a href="#">news</a></label>
+                    <label for="main-nav__news">news</label>
                     <ul class="sub-nav sub-nav__news">
                         <li>
                             <a href="#">news1</a>
@@ -100,7 +124,7 @@
                             <a href="#">news4</a>
                         </li>
                     </ul><!--? end sub-nav__news -->
-                </li><!--? end news-->
+                </li><!--? end news -->
                 <li class="about">
                     <a href="#">about us</a>
                 </li><!--? end about -->
