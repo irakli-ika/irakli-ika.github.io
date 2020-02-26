@@ -1,0 +1,88 @@
+html {
+      scroll-behavior: smooth;
+}
+
+.nav {
+    background-color: rgb(27, 26, 26);
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 777;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.row {
+    display: flex;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 50px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+
+.nav .col a:hover {
+    
+}
+.nav .col:nth-child(1) a {
+    background-color: rgba(255, 0, 0, 0.699);
+}
+.nav .col:nth-child(2) a {
+    background-color: rgba(0, 128, 0, 0.726);
+}
+.nav .col:nth-child(3) a {
+    background-color: rgba(0, 0, 255, 0.726);
+}
+.nav .col:nth-child(4) a {
+    background-color: rgba(255, 166, 0, 0.719);
+}
+.nav .col:nth-child(5) a {
+    background-color: rgba(128, 0, 128, 0.788);
+}
+/*? start section elements */
+.section {
+    height: 100vh;
+}
+
+.section-red {
+    background-color: rgba(255, 0, 0, 0.699);
+}
+.section-green {
+    background-color: rgba(0, 128, 0, 0.726);
+}
+.section-blue {
+    background-color: rgba(0, 0, 255, 0.726);
+}
+.section-orange {
+    background-color: rgba(255, 166, 0, 0.719);
+}
+.section-purple {
+    background-color: rgba(128, 0, 128, 0.788);
+}
+
+
+.section-red:target ~ .nav a[href="#sec-red"] {
+    color:white;
+}
+.section-green:target ~ .nav a[href="#sec-green"] {
+    color:white;
+}
+
+.section-red:target ~ .nav a[href="#sec-red"] {
+    color:white;
+}
+
+.section-red:target ~ .nav a[href="#sec-red"] {
+    color:white;
+}
+
+.section-red:target ~ .nav a[href="#sec-red"] {
+    color:white;
+}
+
