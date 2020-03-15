@@ -1,0 +1,104 @@
+body {
+    overflow-x: hidden;
+}
+.road {
+    position: relative;
+    background: url("../images/road.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 70vh;
+}
+/*? common elements */
+.move_object {
+    position: absolute;
+}
+/*? start bird */
+.bird {
+    background: url("../images/pajaro.gif");
+    width: 155px;
+    height: 140px;
+    right: 0;
+    animation: fly_forward 13s linear infinite,
+                translate_y 1s infinite;
+}
+
+@keyframes fly_forward {
+    0% {
+        transform: translateX(150px) translateY(0px);
+    }
+    100% {
+        transform: translateX(-1200px) translateY(20px);
+    }
+}
+@keyframes translate_y {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 10px;
+    }
+    50% {
+        top: 0px;
+    }
+    75% {
+        top: 10px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+/*? start walker*/
+.walker{
+    background: url("../images/walker.png")
+                no-repeat;
+    width: 69px;
+    height: 120px;
+    top: 37%;
+    animation: walker 1s steps(8) infinite reverse,
+                walker_forward 10s linear infinite;
+}
+
+@keyframes walker {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -558px;
+    }
+}
+@keyframes walker_forward {
+    0% {
+        transform: translateX(1500px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+/*? start men_object */
+.man {
+    background: url("../images/man.png");
+    width: 70px;
+    height: 130px;
+    top: 40%;
+    animation: man_walker 1s steps(8) infinite reverse,
+                man_forward 10s linear infinite;
+}
+
+@keyframes man_walker {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 600px;
+    }
+}
+@keyframes man_forward {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(1250px);
+    }
+}
