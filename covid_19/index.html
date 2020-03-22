@@ -13,17 +13,74 @@
                 <div class="inner">
                     <label for="click" class="click">&times;</label>
                     <img src="images/hand-wash-banner.png" alt="">
-                    <p>please wash hands often</p>
+                    <p>please wash your hands frequently</p>
                 </div><!--? end inner -->
             </div><!--? end pop_up -->
         </div><!--? end modal -->
+
+        <!--? ---------------- start section elements --------------- ?-->
         <section id="section">
             <div class="container">
-                <div class="grid">
+                <!--? --------------- start modal box elements --------------- ?-->
+                <input type="checkbox" id="open-wash-hands">
+                <input type="checkbox" id="open-sneezing">
+                <input type="checkbox" id="open-travel">
+                <input type="checkbox" id="open-medical-care">
+                <input type="checkbox" id="open-mask">
+                <input type="checkbox" id="open-food">
+                <input type="checkbox" id="open-animal">
+
+                <div class="box_modal" id="box_modal-wash-hands">
+                    <div class="pop_up-box-wash">
+                        <iframe width="400" height="214" frameborder="0" src="https://www.bbc.com/news/av/embed/p086g35r/51754472"></iframe>
+                        <!-- <p>wash hands with soap and water after touching animals and animal products</p> -->
+                        <label for="open-wash-hands" class="close">&times;</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->
+                <div class="box_modal" id="box_modal-sneezing">
+                    <div class="pop_up-box">
+                        <p>when coughing and sneezing cover mouth and nose with flexed elbow or tissue</p>
+                        <label for="open-sneezing" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->
+                <div class="box_modal" id="box_modal-travel">
+                    <div class="pop_up-box">
+                        <p>avoid travel if you have a fever and cough</p>
+                        <label for="open-travel" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->               
+                <div class="box_modal" id="box_modal-medical-care">
+                    <div class="pop_up-box">
+                        <p>if you have a fever, cough and difficulty breathing seek medical care early</p>
+                        <label for="open-medical-care" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->            
+                <div class="box_modal" id="box_modal-mask">
+                    <div class="pop_up-box">
+                        <p>if you are coughing or sneezing, wear a mask and must know how to use it and dispose of it properly</p>
+                        <label for="open-mask" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->               
+                <div class="box_modal" id="box_modal-food">
+                    <div class="pop_up-box">
+                        <p>eat only well-cooked food</p>
+                        <label for="open-food" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->                
+                <div class="box_modal" id="box_modal-animal">
+                    <div class="pop_up-box">
+                        <p>avoid close contact with animals that are sick</p>
+                        <label for="open-animal" class="close">close</label>
+                    </div><!--? end pop_up-box -->
+                </div><!--? end box_modal -->
+
+                <!--? ---------------- start grid elements ---------------- ?-->
+                   <div class="grid">
                     <div class="box">
                         <div class="content">
                             <img src="images/washing-hand.png" alt="">
                             <p>wash hands with soap and water after touching animals and animal products</p>
+                        <label for="open-wash-hands" class="more">more</label>
                         </div><!--? end content -->
                     </div><!--? end box -->
                     <div class="box">
@@ -31,36 +88,42 @@
                             <img src="images/cold.png" alt="">
                             <p>when coughing and sneezing cover mouth and nose with flexed elbow or tissue</p>
                         </div><!--? end content -->
+                        <label for="open-sneezing" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                     <div class="box">
                         <div class="content">
                             <img src="images/flight.png" alt="">
                             <p>avoid travel if you have a fever and cough</p>
                         </div><!--? end content -->
+                        <label for="open-travel" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                     <div class="box">
                         <div class="content">
                             <img src="images/first-aid-kit.png" alt="">
                             <p>if you have a fever, cough and difficulty breathing seek medical care early</p>
                         </div><!--? end content -->
+                        <label for="open-medical-care" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                     <div class="box">
                         <div class="content">
                             <img src="images/medical-mask.png" alt="">
                             <p>if you are coughing or sneezing, wear a mask and must know how to use it and dispose of it properly</p>
                         </div><!--? end content -->
+                        <label for="open-mask" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                     <div class="box">
                         <div class="content">
                             <img src="images/cooking.png" alt="">
                             <p>eat only well-cooked food</p>
                         </div><!--? end content -->
+                        <label for="open-food" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                     <div class="box">
                         <div class="content">
                             <img src="images/fever.png" alt="">
                             <p>avoid close contact with animals that are sick</p>
                         </div><!--? end content -->
+                        <label for="open-animal" class="more">more</label><!--? end more -->
                     </div><!--? end box -->
                 </div><!--? end grid -->
             </div><!--? end container -->

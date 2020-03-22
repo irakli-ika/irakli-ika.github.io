@@ -1,36 +1,113 @@
+/* todo::
+   ! Table of Contents !
+   todo:: some elements
+   todo:: start modal elements
+   todo:: start section elements
+   todo:: start box_modal
+   todo:: start media elements
+todo:: */
 body {
     background-color: hsl(0, 0%, 13%);
     color: hsla(0, 100%, 100%, 0.8);
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
 }
-/*? start modal elements */
-.pop_up {
+/*? ____ some elements ____ */
+section .grid .box,
+.inner {
+    text-align: center;
+}
+section .grid p::first-letter,
+.box_modal p::first-letter {
+    text-transform: uppercase;
+}
+.pop_up,
+.box_modal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsla(0, 0%, 43%, 0.85);
-    z-index: 888;
+    background-color: hsla(0, 0%, 21%, 0.85);
+    z-index: 333;
 }
+.pop_up-box-wash,
+.pop_up-box,
 .inner {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    background-color: hsla(0, 0%, 26%);
-    padding: 50px 90px;
-    text-align: center;
     border-radius: 10px;
 }
+.pop_up-box-wash,
+.pop_up-box {
+    padding: 70px 100px;
+}
+.box .more,
+.close,
 .inner p {
+    text-transform: uppercase;
+}
+.inner p,
+.click {
     font-size: 30px;
+}
+.inner p,
+.box .content p {
+    user-select: none;
+}
+.box .more,
+.close {
+    position: absolute;
+    padding: 5px;
+    font-size: 17px;
+    text-decoration: none;
+    background-color: hsla(4, 100%, 63%, 0.8);
+    color: hsla(0, 100%, 100%, 0.8);
+    font-weight: bold;
+    border: 2px solid hsla(0, 0%, 35%, 0.473);
+    border-radius: 7px
+}
+.close,
+.click,
+section .grid .box {
+    transform: scale(1);
+}
+.click,
+.close,
+.box .more {
+    cursor: pointer;
+}
+.box:hover .more,
+#open-wash-hands:checked ~ #box_modal-wash-hands,
+#open-sneezing:checked ~ #box_modal-sneezing,
+#open-travel:checked ~ #box_modal-travel,
+#open-medical-care:checked ~ #box_modal-medical-care,
+#open-mask:checked ~ #box_modal-mask,
+#open-food:checked ~ #box_modal-food,
+#open-animal:checked ~ #box_modal-animal {
+    visibility: visible;
+}
+#click:checked ~ .pop_up,
+.box_modal,
+.box .more {
+    visibility: hidden;
+}
+/*? _____ start modal elements _____ */
+.pop_up {
+    background-color: hsla(0, 0%, 43%, 0.85);
+    z-index: 222;
+}
+.inner {
+    background-color: hsla(0, 0%, 26%);
+    padding: 50px 90px;
+}
+.inner p {
+    
     letter-spacing: 2px;
     line-height: 2;
-    text-transform: uppercase;
     color: rgba(255, 151, 66, 0.8);
-    user-select: none;
 }
 input {
     display: none;
@@ -40,13 +117,14 @@ input {
     top: 5%;
     right: 5%;
     z-index: 999;
-    font-size: 30px;
-    cursor: pointer;
+    transition: color 0.2s, transform 1s;
 }
-#click:checked ~ .pop_up {
-    visibility: hidden;
+.click:hover {
+    color: hsla(0, 0%, 43%, 0.85);
+    transform: scale(1.7);
 }
-/*? start section elements */
+
+/*? ______ start section elements ______ */
 .container {
     max-width: 1250px;
     margin: 100px auto;
@@ -62,27 +140,20 @@ section .grid .box {
     display: grid;
     background-color: hsl(0, 1%, 26%);
     padding: 20px;
-    text-align: center;
     place-items: center;
     font-size: 20px;
     transition: background-color .5s, transform 1s;
-    transform: scaleY(1)
-                scaleX(1);
 }
 section .grid .box:hover {
     background-color: hsl(340, 82%, 52%);
-    transform: scaleY(1.03)
-                scaleX(1.03);
-    z-index: 777;
+    transform: scale(1.03);
+    z-index: 111;
 }
 section .grid .box:nth-child(1) {
     grid-column: span 2;
     grid-row: span 1;
 }
-section .grid .box:nth-child(2) {
-    grid-column: span 1;
-    grid-row: span 2;
-}
+section .grid .box:nth-child(2),
 section .grid .box:nth-child(4) {
     grid-column: span 1;
     grid-row: span 2;
@@ -92,11 +163,56 @@ section .grid .box:nth-child(5) {
     grid-row: span 1;
 }
 
-/*? start media elements */
+/*? _____ start button more elements _____ */
+.box .more {
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: transform 1s, opacity 2s, box-shadow 0.5s;
+}
+.box:hover .more {
+    opacity: 1;
+    transform: translateX(-10px);
+}  
+.close:hover,
+.box .more:hover {
+    box-shadow: 0px 0px 8px 3px grey;
+    transition: box-shadow 0.8s;
+}
+
+/*? ______ start box_modal _____ */
+.pop_up-box-wash {
+    background-color: transparent;
+}
+.pop_up-box-wash .close {
+    right: 10px;
+    bottom: 90%;
+    padding: 0 12px;
+    font-size: 25px;
+}
+.pop_up-box {
+    background-color: hsl(0, 0%, 13%);
+}
+.close {
+    bottom: 15px;
+    right: 15px;
+    transition: transform 1s;
+}
+.close:hover {
+    transform: scale(1.1);
+}
+
+/*? ______ start media elements ______ */
 @media (max-width:1070px) {
     .inner p {
         font-size: 20px;
         letter-spacing: 0;
+    }
+}
+@media (max-width:945px) {
+    .pop_up-box {
+        padding: 70px 30px;
     }
 }
 @media (max-width: 860px) {
@@ -111,6 +227,11 @@ section .grid .box:nth-child(5) {
     section .grid .box:last-child {
         grid-column: span 2 !important;
         grid-row: span 1 !important;
+    }
+}
+@media (max-width: 630px) {
+    .pop_up-box-wash .close {
+        right: 15.5%;
     }
 }
 @media (max-width: 605px) {
@@ -131,5 +252,18 @@ section .grid .box:nth-child(5) {
     }
     .inner img {
         width: 180px;
+    }
+}
+@media (max-width: 905px) {
+    .inner {
+        padding: 30px 30px;
+        
+    }
+    .inner p {
+        font-size: 16px;
+        line-height: 1;
+    }
+    .inner img {
+        width: 160px;
     }
 }
