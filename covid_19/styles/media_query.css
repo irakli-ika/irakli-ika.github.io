@@ -1,0 +1,189 @@
+@media (max-width: 1215px) {
+    .row-protect-happens {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-heppens {
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+    .wrapper .child-row iframe {
+        width: 860px;
+        height: 515px;
+    }
+}
+@media (max-width:1070px) {
+    .modal_window p {
+        font-size: 35px;
+        letter-spacing: 0;
+    }
+}
+@media (max-width: 980px) {
+    .wrapper .child-row iframe {
+        width: 660px;
+        height: 415px;
+    }
+}
+@media (max-width:945px) {
+    .pop_up-box {
+        padding: 70px 30px;
+    }
+}
+@media (max-width: 880px) {
+    .modal_window > img {
+        width: 200px;
+    }
+    .modal_window p {
+        font-size: 30px;
+    }
+}
+@media (max-width: 860px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    section .grid .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    section .grid .box:last-child {
+        grid-column: span 2 !important;
+        grid-row: span 1 !important;
+    }
+}
+@media (max-width: 803px) {
+    .modal_window p {
+        font-size: 25px;
+    }
+}
+@media (max-width: 780px) {
+    .wrapper h2 {
+        font-size: 60px;
+    }
+    .wrapper .child-row iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+@media (max-width: 630px) {
+    .pop_up-box-wash .close {
+        right: 15.5%;
+    }
+}
+@media (max-width: 620px) {
+    .wrapper .child-row iframe {
+        width: 460px;
+        height: 215px;
+    }
+    .row-coronaviruses,
+    .col-heppens {
+        margin-bottom: 40px;
+    }
+    .wrapper h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 605px) {
+    section .grid .box:last-child {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    header img {
+        width: 250px;
+    }
+}
+@media (max-width: 580px) {
+    .left {
+        left: -70px;
+    }
+    .right {
+        right: -70px;
+    }
+    .left img,
+    .right img {
+        width: 50px;
+    }
+}
+@media (max-width: 522px) {
+    .modal_window {
+        padding: 45px 65px;
+    }
+    .modal_window p {
+        font-size: 20px;
+    }
+    .modal_window > img {
+        width: 175px;
+    }
+}
+@media (max-width: 494px) {
+    .modal_window {
+        padding: 40px 60px; 
+    }
+    .modal_window p {
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+@media (max-width: 480px) {
+    .wrapper h2 {
+        font-size: 50px;
+    }
+    .wrapper .child-row iframe {
+        width: 360px;
+        height: 215px;
+    }
+    .wrapper h3 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 430px) {
+    .left {
+        left: -55px;
+    }
+    .right {
+        right: -55px;
+    }
+    .left img,
+    .right img {
+        width: 40px;
+    }
+    header img {
+        width: 150px;
+    }
+}
+@media (max-width: 380px) {
+    .modal_window {
+        padding: 30px 50px;
+    }
+    .modal_window > img {
+        width: 170px;
+    }
+    .wrapper h2 {
+        font-size: 30px;
+        padding-bottom: 40px;
+    }
+    .wrapper h3 {
+        font-size: 13px;
+    }
+    .wrapper .child-row iframe {
+        width: 260px;
+        height: 115px;
+    }
+    .row-coronaviruses,
+    .col-heppens {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 360px) {
+    .modal_window p {
+        font-size: 16px;
+    }
+    .modal_window > img {
+        width: 130px;
+    }
+}
+@media (max-width: 320px) {
+    .modal_window {
+        padding: 40px 40px; 
+    }
+}

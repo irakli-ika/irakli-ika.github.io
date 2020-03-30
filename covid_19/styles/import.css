@@ -1,4 +1,6 @@
 @import 'reset.css';
-@import 'https://fonts.googleapis.com/css?family=Rubik&display=swap';
 @import 'index.css';
+@import 'media_query.css';
+@import 'https://fonts.googleapis.com/css?family=Rubik&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&display=swap';
 /*? end import files */

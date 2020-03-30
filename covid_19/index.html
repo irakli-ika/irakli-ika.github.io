@@ -7,19 +7,34 @@
         <title>COVID_19</title>
     </head>
     <body>
+        <!--? ----------------- start main modal elements -------------- ?-->
+        <input type="radio" name="close" id="exit">
         <div class="modal">
-            <input type="radio" id="click">
-            <div class="pop_up">
-                <div class="inner">
-                    <label for="click" class="click">&times;</label>
-                    <img src="images/hand-wash-banner.png" alt="">
-                    <p>please wash your hands frequently</p>
-                </div><!--? end inner -->
-            </div><!--? end pop_up -->
-        </div><!--? end modal -->
-
+            <input type="radio" name="modal" id="checked-stay-home">
+            <input type="radio" name="modal" id="checked-hand-wash" checked>
+            <div class="modal_window modal_window_stay-home">
+                <img src="images/stayhome.png" alt="">
+                <p>#StayHome</p>
+                <label for="checked-stay-home" class="right"><img src="images/R-blue.png" alt=""></label>
+                <label for="exit" class="exit">&times;</label>
+            </div>
+            <div class="modal_window modal_window_hand-wash">
+                <img src="images/hand-wash-banner.png" alt="">
+                <p>Wash your hands friquently</p>
+                <label for="checked-hand-wash" class="left"><img src="images/L-blue.png" alt=""></label>
+                <label for="exit" class="exit">&times;</label>
+            </div>
+            <!-- <div class="nav">
+                <label for="checked-hand-wash" class="dots dot_hand-wash"></label>
+                <label for="checked-stay-home" class="dots dot_stay-home"></label>
+            </div> -->
+        </div>
         <!--? ---------------- start section elements --------------- ?-->
         <section id="section">
+            <!--? ---------------- start header elements --------------- ?-->
+            <header>
+                <img src="images/stopCov.png" alt="">
+            </header> <!--? end header -->
             <div class="container">
                 <!--? --------------- start modal box elements --------------- ?-->
                 <input type="checkbox" id="open-wash-hands">
@@ -75,7 +90,7 @@
                 </div><!--? end box_modal -->
 
                 <!--? ---------------- start grid elements ---------------- ?-->
-                   <div class="grid">
+                <div class="grid">
                     <div class="box">
                         <div class="content">
                             <img src="images/washing-hand.png" alt="">
@@ -127,6 +142,45 @@
                     </div><!--? end box -->
                 </div><!--? end grid -->
             </div><!--? end container -->
+            <a href="#wrapper"><svg class="arrows">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg></a>
         </section><!--? end section -->
+
+        <!--? ------------- start wrapper elements ------------------- ?-->
+        <div class="wrapper" id="wrapper">
+            <div class="container">
+                <div class="row main-row">
+                    <div class="col main-col">
+                        <div class="row child-row row-coronaviruses">
+                            <h2>coronaviruses</h2>
+                            <div><iframe width="560" height="315" src="https://www.youtube.com/embed/mOV1aBVYKGA" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        </div><!--? end row-coronaviruses -->
+                        <div class="row child-row row-protect-happens">
+                            <div class="col child-col col-heppens">
+                                <h3>What Happens If You Get Coronavirus?</h3>
+                                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/5DGwOJXSxqg" frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            </div><!--? end col-heppens -->
+                            <div class="col child-col col-protect">
+                                <h3>How to protect yourself against COVID-19</h3>
+                                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/1APwq1df6Mw" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            </div><!--? end col-protect -->
+                        </div><!--? end row-protect-happens -->
+                    </div><!--? end main-col -->
+                </div><!--? end main-row -->
+            </div><!--? end container -->
+        </div><!--? end wrapper -->
+
+        <!--? ------------- start copyright elemetns ------------------- ?-->
+        <footer>
+            <div class="copyRight" style="font-family: sans-serif">
+                <p>&copy; CopyRight</p>
+            </div>
+        </footer>
     </body>
 </html>
