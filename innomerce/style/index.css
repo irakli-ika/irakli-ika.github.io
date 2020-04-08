@@ -1,0 +1,232 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1250px;
+}
+.row {
+    display: flex;
+}
+/*? _______ start some elements ______ ?*/
+.nav .active,
+.nav a:hover {
+    border-top: 3px solid hsl(var(--black));
+}
+.nav a, .banner h3,
+.banner h1, h6 {
+    text-transform: uppercase;
+}
+.banner h3,
+.banner h1 {
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+.banner__container,
+.banner .content {
+    height: 95%;
+}
+.banner h3,
+.section__header h5 {
+    color: hsla(var(--black), 0.616);
+}
+.about--img img, .banner,
+.services_row_col, .display p {
+    width: 100%;
+}
+.welcome--desc p, .about__row__col--text p,
+.about--header, .statistic {
+    text-align: left;
+}
+.about__row__col--text p,
+.container, .banner .content,
+.services--header__box__row,
+.box p {
+    margin: auto;
+}
+.about__row__col--text p,
+.about--header {
+    max-width: 75%;
+}
+.nav a,
+.section__header h5 {
+    letter-spacing: 5.1px;
+}
+.banner .content::before,
+.banner .content::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+}
+.banner__row ,
+.section__row--welcome {
+    flex-direction: column;
+}
+.banner,
+section .content {
+    text-align: center;
+}
+.nav a,
+.display,
+.welcome--desc div {
+    display: inline-block;
+}
+.about--img img,
+header .logo img {
+    display: block;
+}
+.section__header h5,
+.section__header h2,
+.welcome--desc p,
+.about--desc p {
+    padding-bottom: 30px;
+}
+.section__header h2,
+.num {
+    font-size: 35px;
+}
+.desc p,
+.statistic .text,
+h6 {
+    font-size: 14px;
+}
+.desc p,
+.statistic .text,
+.section__row--services p {
+    color: hsla(var(--black), 0.59);
+    line-height: 1.8;
+}
+h1, h2, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+/*? _______ start header elements _______ ?*/
+.header__row {
+    justify-content: space-between;
+}
+.nav a {
+    font-size: 12px;
+    color: hsl(var(--black));
+    margin-left: 50px;
+    padding: 55px 0 40px;
+    transition: border .2s ease;
+}
+header .logo img {
+    padding-top: 40px;
+}
+/*? _______ start banner elements _______ ?*/
+.banner{
+    position: relative;
+    background-image: url("../img/bg-slider.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 750px;
+}
+.banner__row {
+    justify-content: center;
+}
+.banner .content {
+    max-width: 70%;
+}
+.banner h3 {
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+.banner h1 {
+    font-size: 60px;
+    letter-spacing: 20px;
+}
+.banner .content::before {
+    background-image: url('../img/left.png');
+    left: 20px;
+}
+.banner .content::after {
+    background-image: url('../img/right.png');
+    right: 20px;
+}
+/*? _______ start section elements ________ ?*/
+section,
+.section__row--services {
+    padding-top: 100px;
+}
+.welcome--desc div {
+    max-width: 37%;
+}
+.welcome--desc div:first-child {
+    margin-right: 20px;
+}
+.welcome--desc div:last-child {
+    margin-left: 20px;
+}
+.section__header h2 {
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+strong {
+    color: hsl(var(--black));
+}
+.section__row {
+    margin-bottom: 20px;
+}
+.section__row--about {
+    padding: 0 10px;
+}
+.about__row__col--img {
+    max-width: 45%;
+    margin-right: 50px;
+}
+.about__row__col--text {
+    max-width: 35%;
+    margin-left: 40px;
+}
+.about--header {
+    padding-top: 40px;
+}
+.about--img img {
+    height: 100%;
+}
+.num {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+.statistic {
+    padding-left: 55px;
+}
+.display {
+    margin-right: 25px;
+}
+.display p {
+    margin: 0;
+    max-width: 100%;
+}
+.section__row--services h6 {
+    color: hsl(0, 0%, 13%);
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.services--header {
+    margin-bottom: 50px;
+}
+.services--header__box__row img,
+.services--header__box__row h6,
+.services--header__box__row p {
+    padding-bottom: 20px;
+}
+.services--header__box__row {
+    max-width: 1230px;
+}
+.box {
+    max-width: 425px;
+    padding: 30px 0;
+    transition: box-shadow .5s;
+}
+.box:hover {
+    box-shadow: 0 0 10px 2px grey;
+}
+.box p {
+    max-width: 80%;
+}
