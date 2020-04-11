@@ -4,12 +4,8 @@ body {
 a {
     text-decoration: none;
 }
-h5 {
-    font-weight: 300;
-}
-.container,
-.banner,
-.wrapper--statistic {
+.container, .banner,
+.wrapper--statistic, .wrapper--managers {
     max-width: 1280px;
 }
 .row {
@@ -20,8 +16,8 @@ h5 {
 .nav a:hover {
     border-top: 3px solid hsl(var(--black));
 }
-.nav a, .banner h3,
-.banner h1, h6 {
+.nav a, .banner h3, .banner h1, h6,
+.wrapper--managers .position, .wrapper--managers .name {
     text-transform: uppercase;
 }
 .banner__container,
@@ -35,7 +31,8 @@ h5 {
 }
 .about--img img, .banner,
 .services_row_col, .display p,
-.wrapper--statistic::after, .child--row img {
+.wrapper--statistic::after, .child--row img,
+.quote img {
     width: 100%;
 }
 .welcome--desc p, .about__row__col--text p,
@@ -44,7 +41,7 @@ h5 {
 }
 .about__row__col--text p, .container, .banner .content,
 .services--header__box__row, .wrapper--statistic__container,
-.box p, .header__container, .banner {
+.box p, .header__container, .banner, .quote {
     margin: auto;
 }
 .about__row__col--text p,
@@ -56,10 +53,12 @@ h5 {
 .header h5 {
     letter-spacing: 5.1px;
 }
+.banner .content::before, .banner .content::after,
+.child--row::after, .child--row::before {
+    position: absolute;
+}
 .banner .content::before,
 .banner .content::after {
-    content: '';
-    position: absolute;
     background-repeat: no-repeat;
     top: 50%;
     width: 24px;
@@ -69,18 +68,22 @@ h5 {
 .section__row--welcome {
     flex-direction: column;
 }
-.banner, section .content,
-.section__header, .wrapper--statistic__row {
+.banner, section .content, .section__header,
+.wrapper--statistic__row, .wrapper--managers {
     text-align: center;
+}
+.section__row--services h6,
+h5, .managers--desc,
+.wrapper--managers .position {
+    font-weight: 300;
 }
 .nav a,
 .display,
 .welcome--desc div {
     display: inline-block;
 }
-.about--img img,
-header .logo img,
-.child--row img {
+.about--img img, header .logo img,
+.child--row img, .quote img {
     display: block;
 }
 .section__header h5,
@@ -95,9 +98,9 @@ header .logo img,
 .num {
     font-size: 35px;
 }
-.desc p,
-.statistic .text,
-h6 {
+.desc p, .statistic .text,
+h6, .managers--desc,
+.wrapper--managers .position {
     font-size: 14px;
 }
 .desc p,
@@ -107,7 +110,7 @@ h6 {
     line-height: 1.8;
 }
 .section__row--services h6,
-.text--white {
+.text--sizing {
     letter-spacing: 3px;
 }
 section,
@@ -117,32 +120,51 @@ section,
 .services--header__box__row img,
 .services--header__box__row h6,
 .services--header__box__row p,
-.banner h3, .banner h1  {
+.banner h3, .banner h1,
+.wrapper--managers .name {
     padding-bottom: 20px;
 }
-.num--white,
-.text--white {
+.num--white, .text--white,
+.managers--desc {
     color: hsl(0, 100%, 100%);
 }
 .section__header h2, .header h2,
-.text--white,.banner h3, .banner h1 {
+.text--sizing,.banner h3, .banner h1 {
     font-weight: 100;
+}
+.section__header h2, .header h2,
+.banner h3, .banner h1 {
     letter-spacing: 10px;
 }
 .about--img img,
 .wrapper--statistic::after {
     height: 100%;
 }
-h1, h2, h6 {
+.header__row, .main--row,
+.wrapper--statistic__row {
+    justify-content: space-between;
+}
+.child--row::after,
+.child--row::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.child--row,
+.banner {
+    position: relative;
+}
+.banner .content,
+.wrapper--managers__content {
+    max-width: 70%;
+}
+h1, h2, h6, h4 {
     font-family: 'Oswald', sans-serif;
 }
 /*? _______ start header elements _______ ?*/
 .header__container {
     max-width: 1250px;
-}
-.header__row, .main--row,
-.wrapper--statistic__row {
-    justify-content: space-between;
 }
 .nav a {
     font-size: 12px;
@@ -155,18 +177,13 @@ header .logo img {
     padding-top: 40px;
 }
 /*? _______ start banner elements _______ ?*/
-.banner{
-    position: relative;
-    background-image: url("../img/bg-slider.jpg");
+.banner {
+    background: url("../img/bg-slider.jpg") no-repeat center;
     background-size: cover;
-    background-position: center;
     height: 750px;
 }
 .banner__row {
     justify-content: center;
-}
-.banner .content {
-    max-width: 70%;
 }
 .banner h3 {
     font-size: 25px;
@@ -177,10 +194,12 @@ header .logo img {
     letter-spacing: 20px;
 }
 .banner .content::before {
+    content: '';
     background-image: url('../img/left.png');
     left: 20px;
 }
 .banner .content::after {
+    content: '';
     background-image: url('../img/right.png');
     right: 20px;
 }
@@ -230,8 +249,7 @@ strong {
     max-width: 100%;
 }
 .section__row--services h6 {
-    color: hsl(0, 0%, 13%);
-    font-weight: 300;
+    color: hsl(var(--light-black));
 }
 .services--header {
     margin-bottom: 50px;
@@ -256,15 +274,9 @@ strong {
     margin: 80px auto;
 }
 .wrapper--statistic {
-    background-image: url(../img/image.jpg);
-    filter: brightness(.8);
+    background: url(../img/image.jpg) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: 8% calc(80% + 3.4px);
-}
-.wrapper--statistic::after {
-    background-color: hsl(0, 0%, 13%);
-    z-index: 10000;
 }
 .wrapper--statistic__container {
     max-width: 700px;
@@ -284,4 +296,58 @@ section.portfolio {
 }
 .img--content {
     margin-top: 50px;
+}
+.child--row::before {
+    content: '';
+    transition: background-color .5s;
+}
+.child--row:hover::before {
+    background-color: hsla(0, 0%, 50%, .3);
+}
+.child--row::after {
+    content: '';
+    background: url('../img/plus-32.png') no-repeat center;
+    background-size: 40px;
+    opacity: 0;
+    transform: scale(.7);
+    transition: transform .5s, opacity .5s;
+}
+.child--row:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+.child--row {
+    cursor: pointer;
+}
+
+/*? _______ start wrapper--managers ________ ?*/
+.wrapper--managers {
+    background: url("../img/managers__bg.webp") no-repeat center;
+    background-size: cover;
+    margin-top: 40px;
+}
+.quote {
+    width: 60px;
+    padding-bottom: 90px;
+}
+.wrapper--managers__container{
+    min-height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.managers--desc {
+    line-height: 29px;
+    letter-spacing: 0.5px;
+    padding-bottom: 40px;
+}
+.wrapper--managers .name {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 4px;
+}
+.wrapper--managers .position {
+    letter-spacing: 5px;
+}
+.filter {
+    background-color: hsla(var(--light-black), 0.541);
 }
