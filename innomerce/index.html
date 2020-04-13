@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/import.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>innomerce</title>
     </head>
     <body>
-        <header>
+        <div class="scrollUp">
+            <a href="#header"><img src="img/scrollUp.png" alt=""></a>
+        </div><!--? -------- end scroll--up ------- ?-->
+        <header id="header">
             <div class="container header__container">
                 <div class="row header__row">
                     <div class="col header__row__col logo__col logo">
@@ -69,7 +71,12 @@
                     <div class="section__row row section__row--about">
                         <div class="section__row__col about__row__col--img col">
                             <div class="about--img">
-                                <img src="img/Depositphotos_195226254_el0.jpg" alt="">
+                                <!-- <img src="img/Depositphotos-L.jpg" alt=""> -->
+                                <picture>
+                                    <source media="(min-width: 899px)" srcset="img/Depositphotos-L.jpg">
+                                    <source media="(min-width: 580px)" srcset="img/Depositphotos-M.jpg">
+                                    <img src="img/Depositphotos-S.jpg" alt="">
+                                </picture>
                             </div><!--? ------- end about--img ------- ?-->
                         </div><!--? ------- end section__row__col about__row__col--img col ------- ?-->
                         <div class="section__row__col about__row__col--text col">
@@ -138,7 +145,7 @@
                     </div><!--? ------- end section__row row section__row--services ------- ?-->
                 </div><!--? ------- end section__container__content content ------- ?-->
             </div><!--? ------- end container section__container ------- ?-->
-        </section><!--? ------- end welcome ------- ?-->
+        </section><!--? ------- end section welcome ------- ?-->
         <div class="wrapper wrapper--statistic">
             <div class="filter">
                 <div class="container wrapper--statistic__container">
@@ -177,29 +184,44 @@
                     <div class="row section__row portfolio__row main--row">
                         <div class="main--row__col">
                             <div class="child--row">
-                                <img src="img/portfolio-1-1.webp" alt="">
+                                <picture>
+                                    <source media="(min-width: 980px)" srcset="img/portfolio-1-1.webp">
+                                    <img src="img/portfolio-1-1-M.webp" alt="">
+                                </picture>
                             </div><!--? ------- end child--row ------- ?-->
                             <div class="child--row">
-                                <img src="img/portfolio-4-1.jpg" alt="">
+                                <picture>
+                                    <source media="(min-width: 980px)" srcset="img/portfolio-4-1.jpg">
+                                    <img src="img/portfolio-4-1-M.jpg" alt="">
+                                </picture>
                             </div><!--? ------- end child--row ------- ?-->
                         </div>
                         <div class="main--row__col">
                             <div class="child--row">
-                                <img src="img/portfolio-2-1.jpg" alt="">
+                                <picture>
+                                    <source media="(min-width: 980px)" srcset="img/portfolio-2-1.jpg">
+                                    <img src="img/portfolio-2-1-M.jpg" alt="">
+                                </picture>
                             </div><!--? ------- end child--row ------- ?-->
                         </div>
                         <div class="main--row__col">
                             <div class="child--row">
-                                <img src="img/portfolio-3-1.webp" alt="">
+                                <picture>
+                                    <source media="(min-width: 980px)" srcset="img/portfolio-3-1.webp">
+                                    <img src="img/portfolio-3-1-M.webp" alt="">
+                                </picture>
                             </div><!--? ------- end child--row ------- ?-->
                             <div class="child--row">
-                                <img src="img/portfolio-5-1.webp" alt="">
+                                <picture>
+                                    <source media="(min-width: 980px)" srcset="img/portfolio-5-1.webp">
+                                    <img src="img/portfolio-5-1-M.webp" alt="">
+                                </picture>
                             </div><!--? ------- end child--row ------- ?-->
                         </div><!--? ------- end main--row__col ------- ?-->
                     </div><!--? ------- end row section__row portfolio__row main--row ------- ?-->
                 </div><!--? ------- end img--content ------- ?-->
             </div><!--? ------- end container section__container portfolio--section ------- ?-->
-        </section><!--? ------- end portfolio ------- ?-->
+        </section><!--? ------- end section portfolio ------- ?-->
         <div class="wrapper wrapper--managers">
             <div class="container row wrapper--managers__row wrapper--managers__container filter">
                 <div class="content wrapper--managers__content">
@@ -214,5 +236,24 @@
                 </div><!--? ------- end content wrapper--managers__content ------- ?-->
             </div><!--? ------- end container wrapper--managers__container ------- ?-->
         </div><!--? ------- end wrapper wrapper--managers ------- ?-->
+        <section class="contact">
+            <div class="container section--contact__container">
+                <div class="content contact--content">
+                    <div class="header contact--header">
+                        <h5>INTERESTED ON OUR SERVICES?</h5>
+                        <h2>WAY TO CONTACT US</h2>
+                        <form>
+                            <input type="text" placeholder="name *" required>
+                            <input type="email" placeholder="e-mail *" required>
+                            <textarea type="text" placeholder="message *" required></textarea>
+                            <input type="submit" class="send" value="send"></a>
+                        </form><!--? ------- end form ------- ?-->
+                    </div><!--? ------- end header contact-header ------- ?-->
+                </div><!--? ------- end content contact--content ------- ?-->
+            </div><!--? ------- end container section--contact__container ------- ?-->
+        </section><!--? ------- end section contact ------- ?-->
+        <div class="copyright">
+            <p>2019 ©. Innomerce. All Rights Reserved | Theme design by Zemez.</p>
+        </div><!--? ------- end copyright ------- ?-->
     </body>
 </html>
