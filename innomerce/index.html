@@ -4,12 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/import.css">
+        <link rel="stylesheet" href="style/wow.css">
+        <script src="wow.js"></script>
+        <script>
+            new WOW().init();
+        </script>
         <title>innomerce</title>
     </head>
     <body>
         <div class="scrollUp">
             <a href="#header"><img src="img/scrollUp.png" alt=""></a>
-        </div><!--? -------- end scroll--up ------- ?-->
+        </div><!--? -------- end scrollUp ------- ?-->
         <header id="header">
             <div class="container header__container">
                 <input type="checkbox" name="mini--nav--btn" id="mini--nav--btn" hidden checked>
@@ -22,12 +27,12 @@
                         <a href="#news" class="news">news</a>
                         <a href="#contactsUs" class="contactsUs">contacts us</a>
                         <label for="mini--nav--btn" class="mini--nav--close"><img src="img/close.png" alt=""></label>
-                    </div>
-                </div>
+                    </div><!--? -------- end mini--nav ------- ?-->
+                </div><!--? -------- end mini--nav--content ------- ?-->
                 <div class="row header__row">
                     <div class="col header__row__col logo__col logo">
                         <img src="img/logo.png" alt="">
-                    </div><!--? ------ end col-->
+                    </div><!--? -------- end col header__row__col logo__col logo ------- ?-->
                     <div class="col header__row__col nav--col">
                         <div class="nav">
                             <a href="#home" class="home active">home</a>
@@ -38,12 +43,12 @@
                             <a href="#contactsUs" class="contactsUs">contacts us</a>
                             <label for="mini--nav--btn" class="mini--nav--open"><img src="img/menu.png" alt=""></label>
                         </div><!--? -------- end nav ------- ?-->
-                    </div><!--? -------- end col header_row_col col-nav -------- ?-->
-                </div><!--? --------- end row header_row ------- ?-->
-            </div><!--? -------- end container header_container ------- ?-->
+                    </div><!--? -------- end col header__row__col nav--col -------- ?-->
+                </div><!--? --------- end row header__row ------- ?-->
+            </div><!--? -------- end container header__container ------- ?-->
         </header><!--? -------- end header ------- ?-->
         <div class="banner">
-            <div class="container banner__container ">
+            <div class="container banner__container wow slideInUp" data-wow-duration="2s">
                 <div class="content row banner__row">
                     <div class="banner__header col header__col banner__row__col">
                         <h3>IMPRESS YOUR CLIENT</h3>
@@ -61,19 +66,19 @@
                 <div class="section__container__content content">
                     <div class="section__row row section__row--welcome">
                         <div class="section__row__col welcome__row__col col">
-                            <div class="welcome--header section__header">
+                            <div class="welcome--header section__header wow slideInUp" data-wow-offset="50">
                                 <h5>WELCOME</h5>
                                 <h2>YOU ARE WELCOME</h2>
                             </div><!--? ------- end welcome--header section__header ------- ?-->
-                            <div class="welcome--desc desc">
-                                <div>
+                            <div class="welcome--desc desc animation fadeInLeft">
+                                <div class="wow fadeInLeft" data-wow-offset="80">
                                     <p>Morbi scelerisque lorem at nisl condimentum varius. Nullam mattis viverra vestibulum inceptos
                                     himenaeos.</p>
                                     <p>Vestibulum <strong>quis imperdiet diam,</strong> eu faucibus leo. Class aptent tacit. Lorem ipsum
                                     dolor sit amet, consectetur adipiscing elit.
                                     Nullam congue, felis ac eleifend tempus.</p>
                                 </div>
-                                <div>
+                                <div class="wow fadeInRight" data-wow-offset="80">
                                     <p>Class aptent tacit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue, felis ac eleifend tempus,
                                     nisi metus auctor tortor, ac venenatis diam massa vitae ante.</p>
                                     <p>Praesent tellus libero, tempus eu pulvinar vel, finibus sed nisi. Praesent id pellentesque lorem, vel sagittis eros.</p>
@@ -92,7 +97,7 @@
                                 </picture>
                             </div><!--? ------- end about--img ------- ?-->
                         </div><!--? ------- end section__row__col about__row__col--img col ------- ?-->
-                        <div class="section__row__col about__row__col--text col">
+                        <div class="section__row__col about__row__col--text col wow fadeInRight" data-wow-offset="80">
                             <div class="about--header header">
                                 <h5>ABOUT US</h5>
                                 <h2>WE’LL HELP MANAGE YOUR BUSINESS</h2>
@@ -154,7 +159,7 @@
                                     <p>Nam rutrum nisi mi, sodales posuere eros imperdiet non. Phasellus qui.</p>
                                 </div><!--? ------- end col support-box box ------- ?-->
                             </div><!--? ------- end services--header__box__row ------- ?-->
-                        </div><!--? ------- end section__row__col services_row_col col ------- ?-->
+                        </div><!--? ------- end section__row__col services__row__col col ------- ?-->
                     </div><!--? ------- end section__row row section__row--services ------- ?-->
                 </div><!--? ------- end section__container__content content ------- ?-->
             </div><!--? ------- end container section__container ------- ?-->
@@ -162,7 +167,7 @@
         <div class="wrapper wrapper--statistic">
             <div class="filter">
                 <div class="container wrapper--statistic__container">
-                    <div class="row wrapper--statistic__row">
+                    <div class="row wrapper--statistic__row wow slideInUp" data-wow-offset="150">
                         <div class="col wrapper--statistic__row__col">
                             <div><img src="img/ico-clock.webp" alt=""></div>
                             <p class="num num--white">1,250</p>
@@ -185,7 +190,7 @@
                         </div><!--? ------- end col wrapper--statistic__row__col ------- ?-->
                     </div><!--? ------- end row wrapper--statistic__row ------- ?-->
                 </div><!--? ------- end container wrapper--statistic__container ------- ?-->
-            </div>
+            </div><!--? ------- end filter ------- ?-->
         </div><!--? ------- end wrapper wrapper--statistic ------- ?-->
         <section class="portfolio">
             <div class="container section__container portfolio--section">
@@ -208,7 +213,7 @@
                                     <img src="img/portfolio-4-1-M.jpg" alt="">
                                 </picture>
                             </div><!--? ------- end child--row ------- ?-->
-                        </div>
+                        </div><!--? ------- end main--row__col ------- ?-->
                         <div class="main--row__col">
                             <div class="child--row">
                                 <picture>
@@ -216,7 +221,7 @@
                                     <img src="img/portfolio-2-1-M.jpg" alt="">
                                 </picture>
                             </div><!--? ------- end child--row ------- ?-->
-                        </div>
+                        </div><!--? ------- end main--row__col ------- ?-->
                         <div class="main--row__col">
                             <div class="child--row">
                                 <picture>
@@ -243,11 +248,11 @@
                     </div><!--? ------- end quote ------- ?-->
                     <p class="desc managers--desc text--white">“Right from the initial meeting, we found Innomerce to be very organized, detail-oriented and professional. Their final
                     proposed event plan stood out from the other tenders due to the level of detail involved...In elementum elementum eros,
-                    non luctus metus porttitor eget. Sed ut purus lectus. Praesent non sagittis magna.”</p><!--? ------- end desc managers--desc ------- ?-->
-                    <h4 class="name text--white">Shon Robert</h4><!--? ------- end name ------- ?-->
+                    non luctus metus porttitor eget. Sed ut purus lectus. Praesent non sagittis magna.”</p>
+                    <h4 class="name text--white">Shon Robert</h4>
                     <h5 class="text--white position">manager</h5>
                 </div><!--? ------- end content wrapper--managers__content ------- ?-->
-            </div><!--? ------- end container wrapper--managers__container ------- ?-->
+            </div><!--? ------- end container row wrapper--managers__row wrapper--managers__container filter ------- ?-->
         </div><!--? ------- end wrapper wrapper--managers ------- ?-->
         <section class="contact">
             <div class="container section--contact__container">
@@ -261,7 +266,7 @@
                             <textarea type="text" placeholder="message *" required></textarea>
                             <input type="submit" class="send" value="send"></a>
                         </form><!--? ------- end form ------- ?-->
-                    </div><!--? ------- end header contact-header ------- ?-->
+                    </div><!--? ------- end header contact--header ------- ?-->
                 </div><!--? ------- end content contact--content ------- ?-->
             </div><!--? ------- end container section--contact__container ------- ?-->
         </section><!--? ------- end section contact ------- ?-->

@@ -3,6 +3,7 @@ html {
 }
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -190,7 +191,8 @@ form:valid input[type="submit"], .nav a, .mini--nav a {
     font-size: 12px;
 }
 .child--row, form:invalid input[type="submit"],
-form:valid input[type="submit"] {
+form:valid input[type="submit"], .mini--nav--open,
+.mini--nav--close {
     cursor: pointer;
 }
 .scrollUp,
