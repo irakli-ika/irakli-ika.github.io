@@ -130,8 +130,24 @@
     }
 }
 @media (max-width: 787px) {
+    .mini--nav--open {
+        visibility: visible;
+        position: static;
+    }
+    .nav--col {
+        visibility: hidden;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .logo {
-        max-width: 200px;
+        padding-bottom: 36px;
+    }
+    .nav a {
+        margin-left: 0;
+        letter-spacing: 0;
+        padding: 0;
     }
 }
 @media (max-width: 770px) {
@@ -141,7 +157,6 @@
         margin: 0 auto 80px;
         height: 100%;
     }
-
     .wrapper--statistic__row {
         flex-direction: column;
         align-items: center;

@@ -15,14 +15,19 @@ a {
     display: flex;
 }
 /*? _______ start some elements ______ ?*/
-.nav .active,
-.nav a:hover {
-    border-top: 3px solid hsl(var(--black));
+.nav a,
+.mini--nav a {
+    border-top: 3px solid hsl(0, 0%, 100%);
+}
+.active,
+.nav a:hover,
+.mini--nav a:hover {
+    border-color: hsl(var(--black)) !important;
 }
 .nav a, .banner h3, .banner h1, h6, .wrapper--managers .position,
 .wrapper--managers .name, .contact textarea,.contact input[type="text"],
 .contact input[type="email"],form:invalid input[type="submit"],
-form:valid input[type="submit"] {
+form:valid input[type="submit"], .mini--nav a {
     text-transform: uppercase;
 }
 .banner__container,
@@ -34,7 +39,7 @@ form:valid input[type="submit"] {
 .header h5 {
     color: hsla(var(--black), 0.75);
 }
-.about--img img, .banner, .services_row_col, .display p, .wrapper--statistic::after,
+.about--img img, .banner, .services__row__col, .display p, .wrapper--statistic::after,
 .child--row img, .quote img, .child--row::after, .child--row::before,
 .contact textarea, .contact input[type="text"], .contact input[type="email"]{
     width: 100%;
@@ -57,14 +62,13 @@ form:valid input[type="submit"] {
 .header h5 {
     letter-spacing: 5.1px;
 }
-.child--row, .banner,
-.wrapper--managers__container {
+.child--row, .banner, .header__container,
+.wrapper--managers__container, .mini--nav {
     position: relative;
 }
-.banner .content::before, .banner .content::after,
-.child--row::after, .child--row::before,
-.wrapper--managers__container::after,
-.wrapper--managers__container::before {
+.banner .content::before, .banner .content::after,.child--row::after,
+.child--row::before,.wrapper--managers__container::after,
+.wrapper--managers__container::before, .mini--nav--open, .mini--nav--close {
     position: absolute;
 }
 .banner .content::before,
@@ -93,9 +97,8 @@ h5, .managers--desc,
     display: inline-block;
 }
 .about--img img, header .logo img,
-.child--row img, .quote img,
-.contact input[type="text"],
-.contact input[type="email"] {
+.child--row img, .quote img, .mini--nav a,
+.contact input[type="text"], .contact input[type="email"] {
     display: block;
 }
 .section__header h5,
@@ -146,8 +149,10 @@ h5, .managers--desc,
 .banner h3, .banner h1 {
     letter-spacing: 10px;
 }
-.about--img img,
-.wrapper--statistic::after {
+.about--img img, .wrapper--statistic::after,
+.child--row::after, .child--row::before,
+.mini--nav--content
+{
     height: 100%;
 }
 .header__row, .main--row,
@@ -167,16 +172,13 @@ h5, .managers--desc,
 .wrapper--managers__container::before {
     bottom: 0;
 }
-.child--row::after,
-.child--row::before {
-    height: 100%;
-}
 .banner .content,
 .wrapper--managers__content {
     max-width: 70%;
 }
 .contact textarea, .contact input[type="text"], .contact input[type="email"],
-form:invalid input[type="submit"], form:valid input[type="submit"], strong, .nav a {
+form:invalid input[type="submit"], form:valid input[type="submit"], strong,
+.nav a, .mini--nav a {
     color: hsl(var(--black));
 }
 .contact textarea,.contact input[type="text"],
@@ -184,36 +186,72 @@ form:invalid input[type="submit"], form:valid input[type="submit"], strong, .nav
     letter-spacing: 5px;
 }
 form:invalid input[type="submit"],
-form:valid input[type="submit"], .nav a {
+form:valid input[type="submit"], .nav a, .mini--nav a {
     font-size: 12px;
 }
 .child--row, form:invalid input[type="submit"],
 form:valid input[type="submit"] {
     cursor: pointer;
 }
+.scrollUp,
+.mini--nav--content {
+    position: fixed;
+    z-index: 10000;
+}
+.mini--nav--content,
+.wrapper--managers__container::before {
+    right: 0;
+}
+.contact,
+.mini--nav {
+    padding-top: 50px;
+}
+.mini--nav--close,
+.scrollUp,
+.banner .content::after {
+    right: 20px;
+}
+form:invalid input[type="submit"],
+form:valid input[type="submit"],
+.mini--nav--content {
+    background-color: hsl(0, 0%, 100%);
+}
 h1, h2, h6, h4 {
     font-family: 'Oswald', sans-serif;
 }
+
 /*? _______ start scrollUp _______ ?*/
 .scrollUp {
-    position: fixed;
-    right: 20px;
     bottom: 20px;
-    z-index: 10000;
 }
 /*? _______ start header elements _______ ?*/
 .header__container {
     max-width: 1250px;
 }
-
 .nav a {
     margin-left: 50px;
     padding: 55px 0 40px;
-    transition: border .2s ease;
 }
 header .logo img {
-    padding-top: 40px;
+    padding-top: 36px;
     width: 100%;
+}
+/*? _______ start mini--nav elements _______ ?*/
+.mini--nav--content {
+    min-width: 250px;
+    text-align: right;
+}
+.mini--nav a {
+    margin: 0 0 30px 5px;
+    padding: 10px 5px 0 0;
+    letter-spacing: 2.1px;
+}
+input[name="mini--nav--btn"]:checked ~ .mini--nav--content,
+.mini--nav--open {
+    visibility: hidden;
+}
+.mini--nav--close {
+    top: 20px;
 }
 /*? _______ start banner elements _______ ?*/
 .banner {
@@ -240,7 +278,6 @@ header .logo img {
 .banner .content::after {
     content: '';
     background-image: url('../img/right.png');
-    right: 20px;
 }
 
 /*? _______ start section elements ________ ?*/
@@ -372,7 +409,6 @@ section.portfolio {
     background: url('../img/left-arrow.png') no-repeat;
     background-position: left;
     left: 60px;
-    right: 0;
 }
 .wrapper--managers__container::after {
     content: '';
@@ -395,9 +431,7 @@ section.portfolio {
 }
 
 /*? _______ start section contact ________ ?*/
-.contact {
-    padding-top: 50px;
-}
+
 .contact--header h5 {
     padding-bottom: 0;
 }
@@ -434,7 +468,6 @@ section.portfolio {
 }
 form:invalid input[type="submit"],
 form:valid input[type="submit"] {
-    background-color: hsl(0, 100%, 100%);
     padding: 18px 50px;
     border: 1px solid hsl(var(--black));
     margin: 50px 0;
