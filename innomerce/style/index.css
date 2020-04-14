@@ -9,7 +9,8 @@ a {
     text-decoration: none;
 }
 .container, .banner,
-.wrapper--statistic, .wrapper--managers {
+.wrapper--statistic,
+.wrapper--managers {
     max-width: 1280px;
 }
 .row {
@@ -49,7 +50,7 @@ form:valid input[type="submit"], .mini--nav a {
 .about--header, .statistic {
     text-align: left;
 }
-.about__row__col--text p, .container, .banner .content,
+.about__row__col--text p, .container, .banner .content, .wrapper--managers,
 .services--header__box__row, .wrapper--statistic__container,
 .box p, .header__container, .banner, .quote, .contact form {
     margin: auto;
