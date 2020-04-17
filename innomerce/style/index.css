@@ -390,7 +390,10 @@ section.portfolio {
     opacity: 1;
     transform: scale(1);
 }
-
+.child--row::before,
+.child--row::after {
+    pointer-events: none;
+}
 
 /*? _______ start wrapper--managers ________ ?*/
 .wrapper--managers {
