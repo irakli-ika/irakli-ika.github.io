@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+$bgColor: hsl(0, 2%, 67%);
+$itemsColor: hsl(194, 39%, 55%);
+$itemsColorHover: hsl(194, 52%, 68%);
+$textColor: hsl(212, 100%, 50%);
+
+body {
+    background-color: $bgColor;
+}
+ul {
+    max-width: 500px;
+    margin: 25px auto;
+    text-align: center;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        li{
+            background-color: $itemsColor;
+            color: $textColor;
+            padding: 25px;
+            margin-bottom: 25px;
+            font-size: 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background .5s;
+            letter-spacing: 1px;
+
+            &:hover {
+                background-color: $itemsColorHover;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
