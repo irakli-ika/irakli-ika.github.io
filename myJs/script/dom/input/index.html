@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <title>KEYPRESS</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <label for="txt" class="enterLabel">Enter</label>
+            <label for="txt" class="clearLabel">Clear</label>
+            <input type="text" name="txt" class="enterTxt" placeholder="Enter Text" onchange="onChangeTxt(event)">
+            
+            <div class="txtContainer"></div>
+            
+        </div>
+        <form>
+            <div class="opacity">
+                <label for="opacityControler">Opacity</label>
+                <input type="range" name="opacityControler" id="opacity" min="0" max="1" step="0.1" value="1" onchange="onChangeOpacity(event)">
+                <output for="opacityControler" id="opacityOutput">1</output>
+            </div><!--? end opacity -->
+            <div class="size">
+                <label for="sizeControler">Size</label>
+                <input type="range" name="sizeControler" id="size" min="16" max="100" step="1" value="16" onchange="onChangeSize(event)">
+                <output for="sizeControler" id="sizeOutput">16px</output>
+            </div>
+            <div class="style">
+                <div class="bold">
+                    <label for="boldControler">Bold</label>
+                    <input type="checkbox" name="boldControler" id="bold" onchange="onBoldControl(event)">
+                </div>
+                <div class="italic">
+                    <label for="italicControler">Italic</label>
+                    <input type="checkbox" name="italicControler" id="italic" onchange="onItalicControl(event)">
+                </div>
+                <div class="underline">
+                    <label for="underlineControler">Underline</label>
+                    <input type="checkbox" name="underlineControler" id="underline" onchange="onUnderlineControl(event)">
+                </div>
+            </div>
+            <div class="color">
+                <div>Choose color:</div>
+                <label for="colorRed" class="colorBtn red"></label>
+                <input type="radio" name="color" class="colorChange" id="colorRed" hidden onchange="onColorRed(event)">
+                <label for="colorGreen" class="colorBtn green"></label>
+                <input type="radio" name="color" class="colorChange" id="colorGreen" hidden onchange="onColorGreen(event)">
+                <label for="colorBlue" class="colorBtn blue"></label>
+                <input type="radio" name="color" class="colorChange" id="colorBlue" hidden onchange="onColorBlue(event)">
+            </div>
+            <!-- <span class="resetLabel">Reset</span>
+            <label for="resetLabel" class="resetLabel">Reset</label>
+            <input type="checkbox" name="resetLabel" hidden onchange="onResetLabel(event)"> -->
+        </form>
+        <script src="index.js"></script>
+    </body>
+</html>
