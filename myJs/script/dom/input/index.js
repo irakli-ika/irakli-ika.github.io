@@ -51,15 +51,20 @@ const onUnderlineControl = (e) => {
     else txtContainer.style.textDecoration = 'none'
 }
 
-const onColorRed = (e) => {
-    const colorRed = e.target.checked
-    if (colorRed) txtContainer.style.color = 'red'
-}
-const onColorGreen = (e) => {
-    const colorGreen = e.target.checked
-    if (colorGreen) txtContainer.style.color = 'green'
-}
-const onColorBlue = (e) => {
-    const colorBlue = e.target.checked
-    if (colorBlue) txtContainer.style.color = 'Blue'
+// const onColorRed = (e) => {
+//     const colorRed = e.target.checked
+//     if (colorRed) txtContainer.style.color = 'red'
+// }
+// const onColorGreen = (e) => {
+//     const colorGreen = e.target.checked
+//     if (colorGreen) txtContainer.style.color = 'green'
+// }
+// const onColorBlue = (e) => {
+//     const colorBlue = e.target.checked
+//     if (colorBlue) txtContainer.style.color = 'Blue'
+// }
+
+
+const onChangeColor = (e) => {
+    txtContainer.style.color = e.target.value
 }
