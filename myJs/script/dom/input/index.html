@@ -43,15 +43,27 @@
             <div class="color">
                 <div>Choose color:</div>
                 <label for="colorRed" class="colorBtn red"></label>
-                <input type="radio" name="color" class="colorChange" id="colorRed" hidden onchange="onColorRed(event)">
+                <!-- <input type="radio" name="color" class="colorChange" id="colorRed" hidden onchange="onColorRed(event)">
                 <label for="colorGreen" class="colorBtn green"></label>
                 <input type="radio" name="color" class="colorChange" id="colorGreen" hidden onchange="onColorGreen(event)">
                 <label for="colorBlue" class="colorBtn blue"></label>
-                <input type="radio" name="color" class="colorChange" id="colorBlue" hidden onchange="onColorBlue(event)">
+                <input type="radio" name="color" class="colorChange" id="colorBlue" hidden onchange="onColorBlue(event)"> -->
+                
+                <input type="radio" name="color" class="colorChange" value="red" id="colorRed" hidden onchange="onChangeColor(event)">
+                <label for="colorGreen" class="colorBtn green"></label>
+                <input type="radio" name="color" class="colorChange" value="green" id="colorGreen" hidden onchange="onChangeColor(event)">
+                <label for="colorBlue" class="colorBtn blue"></label>
+                <input type="radio" name="color" class="colorChange" value="blue" id="colorBlue" hidden onchange="onChangeColor(event)">
             </div>
+<<<<<<< HEAD
             
             <span for="resetLabel" class="resetLabel">Reset</span>
             
+=======
+            <!-- <span class="resetLabel">Reset</span>
+            <label for="resetLabel" class="resetLabel">Reset</label>
+            <input type="button" name="resetLabel" hidden onchange="onResetLabel(event)"> -->
+>>>>>>> 2670c46f4f9c0a3de10509d8ac5c298160fd425d
         </form>
         <script src="index.js"></script>
     </body>
