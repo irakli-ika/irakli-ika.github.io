@@ -1,0 +1,21 @@
+@import 'reset.css';
+
+section {
+    margin: 70px auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container {
+    margin-top: 25px;
+}
+.filterBar {
+    border-radius: 10px;
+    background-color: grey;
+    padding: 5px 15px;
+    width: max-content;
+}
+.filterContainer {
+    margin-left: 25px;
+}
