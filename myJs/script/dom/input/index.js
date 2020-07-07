@@ -11,15 +11,13 @@ const enterLabel = document.querySelector('.enterLabel')
 const clearLabel = document.querySelector('.clearLabel')
 const resetLabel = document.querySelector('.resetLabel')
 
-
-
-
 const onChangeTxt = (e) => {
     const text = e.target.value
 
     if (text) {
         enterLabel.addEventListener('click', (e) => {
             txtContainer.innerHTML = text
+            enterText.value = ''
         })
     }
 }
@@ -59,29 +57,38 @@ const onUnderlineControl = (e) => {
     else txtContainer.style.textDecoration = 'none'
 }
 
-const onColorRed = (e) => {
-    const colorRed = e.target.checked
-    if (colorRed) txtContainer.style.color = 'red'
-}
-const onColorGreen = (e) => {
-    const colorGreen = e.target.checked
-    if (colorGreen) txtContainer.style.color = 'green'
-}
-const onColorBlue = (e) => {
-    const colorBlue = e.target.checked
-    if (colorBlue) txtContainer.style.color = 'Blue'
+// const onColorRed = (e) => {
+//     const colorRed = e.target.checked
+//     if (colorRed) txtContainer.style.color = 'red'
+// }
+// const onColorGreen = (e) => {
+//     const colorGreen = e.target.checked
+//     if (colorGreen) txtContainer.style.color = 'green'
+// }
+// const onColorBlue = (e) => {
+//     const colorBlue = e.target.checked
+//     if (colorBlue) txtContainer.style.color = 'Blue'
+// }
+
+const onChangeColor = (e) => {
+    txtContainer.style.color = e.target.value
 }
 
-const eventResetLabel = resetLabel.addEventListener('click', (e) => {
+resetLabel.addEventListener('click', (e) => {
+
     opacity.value = 1
     opacityOutput.value = 1
 
     size.value = 16
     sizeOutput.value = `16px`
 
-    bold.checked = false
-    italic.checked = false
-    underline.checked = false
+    document.querySelectorAll('.font_options').forEach((option) => { option.checked = false })
+    document.querySelectorAll('.color_options').forEach((option) => { option.checked = false })
 
-    txtContainer = txtContainer.style.opacity = 1
+    txtContainer.style.opacity = opacity.value
+    txtContainer.style.fontSize =  size.value + 'px'
+    txtContainer.style.fontWeight = 100
+    txtContainer.style.fontStyle = 'normal'
+    txtContainer.style.textDecoration = 'none'
+    txtContainer.style.color = 'black'
 })

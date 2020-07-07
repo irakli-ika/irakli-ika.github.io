@@ -29,15 +29,15 @@
             <div class="style">
                 <div class="bold">
                     <label for="boldControler">Bold</label>
-                    <input type="checkbox" name="boldControler" id="bold" onchange="onBoldControl(event)">
+                    <input type="checkbox" name="boldControler" class="font_options" id="bold" onchange="onBoldControl(event)">
                 </div>
                 <div class="italic">
                     <label for="italicControler">Italic</label>
-                    <input type="checkbox" name="italicControler" id="italic" onchange="onItalicControl(event)">
+                    <input type="checkbox" name="italicControler" class="font_options" id="italic" onchange="onItalicControl(event)">
                 </div>
                 <div class="underline">
                     <label for="underlineControler">Underline</label>
-                    <input type="checkbox" name="underlineControler" id="underline" onchange="onUnderlineControl(event)">
+                    <input type="checkbox" name="underlineControler" class="font_options" id="underline" onchange="onUnderlineControl(event)">
                 </div>
             </div>
             <div class="color">
@@ -49,11 +49,11 @@
                 <label for="colorBlue" class="colorBtn blue"></label>
                 <input type="radio" name="color" class="colorChange" id="colorBlue" hidden onchange="onColorBlue(event)"> -->
                 
-                <input type="radio" name="color" class="colorChange" value="red" id="colorRed" hidden onchange="onChangeColor(event)">
+                <input type="radio" name="color" class="colorChange color_options" value="red" id="colorRed" hidden onchange="onChangeColor(event)">
                 <label for="colorGreen" class="colorBtn green"></label>
-                <input type="radio" name="color" class="colorChange" value="green" id="colorGreen" hidden onchange="onChangeColor(event)">
+                <input type="radio" name="color" class="colorChange color_options" value="green" id="colorGreen" hidden onchange="onChangeColor(event)">
                 <label for="colorBlue" class="colorBtn blue"></label>
-                <input type="radio" name="color" class="colorChange" value="blue" id="colorBlue" hidden onchange="onChangeColor(event)">
+                <input type="radio" name="color" class="colorChange color_options" value="blue" id="colorBlue" hidden onchange="onChangeColor(event)">
             </div>
             
             <span for="resetLabel" class="resetLabel">Reset</span>
