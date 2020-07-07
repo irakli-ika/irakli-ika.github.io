@@ -1,21 +1,41 @@
 @import 'reset.css';
 
-section {
+img {
+    display: block;
+}
+section,
+.bar {
     margin: 70px auto;
+}
+.margin-top {
+    margin-top: 9px;
+}
+.margin-right {
+    margin-right: 17px;
 }
 .row {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 .container {
-    margin-top: 25px;
+    max-width: 1000px;
+    margin: 25px auto;
 }
 .filterBar {
+    margin: 0 10px;
     border-radius: 10px;
-    background-color: grey;
-    padding: 5px 15px;
+    background-color: rgb(207, 197, 197);
+    padding: 15px 25px;
     width: max-content;
+    text-transform: capitalize;
 }
 .filterContainer {
     margin-left: 25px;
+}
+.active,
+.filterBar:hover {
+    background-color: rgb(248, 161, 0);
+}
+.filterContainer .row div:hover {
+    cursor: pointer;
 }

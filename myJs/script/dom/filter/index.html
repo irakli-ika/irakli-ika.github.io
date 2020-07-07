@@ -7,23 +7,34 @@
         <title>filter</title>
     </head>
     <body>
+        <div class="bar">
+            <div class="col filterContainer">
+                <div class="row">
+                    <div class="all filterBar active">all</div>
+                    <div class="naturalBtn filterBar">natural</div>
+                    <div class="animalBtn filterBar">animal</div>
+                    <div class="cityBtn filterBar">city</div>
+                </div><!-- ? end row -->
+            </div><!-- ? end col filterContainer -->
+        </div><!-- ? end bar -->
         <section>
-            <div class="filterContainer">
-                <span class="naturalBtn filterBar">Natural</span>
-                <span class="animalBtn filterBar">Animal</span>
-                <span class="cityBtn filterBar">City</span>
-            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col city"><img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e" alt=""></div>
-                    <div class="col natural"><img src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190" alt=""></div>
-                    <div class="col natural"><img src="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b" alt=""></div>
-                    <div class="col animal"><img src="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124" alt=""></div>
-                    <div class="col animal"><img src="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c" alt=""></div>
-                    <div class="col city"><img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9" alt=""></div>
-                </div>
-            </div>
-        </section>
+                    <div class="col city img margin-right" data-id="city"><img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e" alt=""></div>
+                    <div class="col">
+                        <div class="row__column">
+                            <div class="col natural img" data-id="natural"><img src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190" alt=""></div>
+                            <div class="col natural img margin-top" data-id="natural"><img src="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b" alt=""></div>
+                        </div><!-- ? end row__column -->
+                    </div><!-- ? end col -->
+                </div><!-- ? end row -->
+                <div class="row margin-top">
+                    <div class="col animal img margin-right" data-id="animal"><img src="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124" alt=""></div>
+                    <div class="col animal img margin-right" data-id="animal"><img src="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c" alt=""></div>
+                    <div class="col city img" data-id="city"><img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9" alt=""></div>
+                </div><!-- ? end row margin-top-->
+            </div><!-- ? end container -->
+        </section><!--? end section -->
 
         <script src="js/index.js"></script>
     </body>

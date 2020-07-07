@@ -1,14 +1,25 @@
-const natural = document.querySelectorAll('.natural')
-const animal = document.querySelectorAll('.animal')
-const city = document.querySelectorAll('.city')
-const naturalBtn = document.querySelector('.naturalBtn')
+const buttons = document.querySelectorAll('.filterBar')
+const sections = document.querySelectorAll('.img')
 
-const filterArr = [
-    {name: natural},
-    {name: animal},
-    {name: city}
-]
+buttons.forEach(item => {
+    item.addEventListener('click', (e) => {
+        // buttons.forEach(item => {
+        //     item.className = ''
+        // })
+        // item.className = 'active'
+        buttons.forEach(item => item.classList.remove('active'))
+        item.classList.add('active')
 
-naturalBtn.addEventListener(('click'), (e) => {
-    document.write(filterArr.filter((i)))
+        let values = item.textContent
+        console.log(values);
+        
+        sections.forEach(show => {
+            show.style.display = 'none'
+            console.log(show);
+            
+            if (show.getAttribute('data-id') === values || values === 'all') {
+                show.style.display = 'block'
+            }
+        })
+    })
 })
