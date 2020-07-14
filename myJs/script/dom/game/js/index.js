@@ -1,3 +1,4 @@
+let clickCounter = 0
 const itemsArr = [
     {
         item : '../img/ka-boom-icon.png',
@@ -47,38 +48,33 @@ while (randomNum.length < itemsArr.length) {
     let rn = Math.floor(Math.random() * itemsArr.length)
         if(randomNum.indexOf(rn) == - 1) randomNum.push(rn)
 }
-console.log(randomNum);
 document.querySelector('.addItems').innerHTML = randomNum.map((item) => {
-   return  `<div class="col col-md-3 text-center items" data-status="${itemsArr[item].status}">
-                <div class="bg-danger mb-2"><img src="img/${itemsArr[item].item}" alt=""></div>
+   return  `<div class="col-md-5 text-center items" data-status="${itemsArr[item].status}">
+                <div class="mb-4" style="pointer-events: none"><img src="img/${itemsArr[item].item}" alt=""></div>
             </div>`
            
 }).join('')
 
-// console.log(document.querySelectorAll('.addItems'));
-// document.querySelectorAll('.addItems').forEach((item) => {
-//     item.innerHTML = randomNum.map((item) => {
-//         return  `<div class="bg-danger mb-2"><img src="img/${itemsArr[item].item}" alt=""></div>`
-//     }).join('')
-// })
-
-
-document.querySelectorAll('.items').forEach((item) => {
-    item.addEventListener("click", (e) => {
- 
- 
-         if ( e.target.getAttribute("data-status") !== "boom" ) {
-             e.target.classList.add("show")
-             tryCount++
-             if (tryCount == (fruitsArr.length - 1)) {
-                 alert ("YOUR WIN") 
-                 if (confirm("TRY")) window.location.reload()
-             }
-            // console.log('win')
-         } else {
-             alert("GAME OVER")
-             if ( confirm( "TRY AGAIN" ) ) window.location.reload()
-         }
+function startGame() {
+    document.querySelectorAll('.items').forEach((item) => {
+        item.addEventListener("click", (e) => {
+            if (e.target.getAttribute('data-status') !== 'boom') {
+                clickCounter++ 
+                e.target.classList.add('show')        
+                if (clickCounter == (itemsArr.length - 3)) {
+                    setTimeout((e) => {
+                        alert('You Win')
+                        if(confirm('Try Again?')) window.location.reload()
+                        else window.location.reload()}, 200)
+                }
+            }
+            else {
+                e.target.classList.add('show')
+                setTimeout((e) => {
+                    alert('Game Over!')
+                    if(confirm('Try Again?')) window.location.reload()
+                    else window.location.reload()}, 200)
+            }
+        })
     })
- })
- 
+}
