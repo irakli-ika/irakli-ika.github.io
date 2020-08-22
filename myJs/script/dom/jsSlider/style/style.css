@@ -1,0 +1,35 @@
+@import "reset.css";
+
+.slider {
+    position: relative;
+    width: 50%;
+    margin: 50px auto;
+    border: 5px black solid;
+    overflow: hidden;
+}
+.slider_container {
+    display: flex;
+    width: 100%;
+    height: 410px;
+}
+
+/*? btn style */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: hsl(0, 0%, 100%);
+    transition: font-size .5s, color .5s;
+}
+.btn:hover {
+    font-size: 38px;
+    color: hsl(0, 2%, 88%);
+    cursor: pointer;
+}
+.prevBtn {
+    left: 4%;
+}
+.nextBtn {
+    right: 4%;
+}
