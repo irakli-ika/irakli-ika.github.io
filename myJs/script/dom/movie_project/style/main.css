@@ -1,0 +1,25 @@
+body {
+    font-family: roboto-geo-upper,sans-serif;
+}
+a {
+    color: #ffffff;
+}
+a:hover {
+    color: #ffffff;
+}
+img {
+    width: 240px;
+    height: 360px;
+}
+.col_row {
+    color: #ffffffa2;
+}
+.col_row .header {
+    color: #ffffff;
+}
+.hide {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
