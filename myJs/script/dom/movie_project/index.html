@@ -44,8 +44,8 @@
             const cols = []
 
             // call functions
-                filterStructure()
-                // pushInCols()
+               filterStructure()
+            // pushInCols()
             // and call functions
 
             
@@ -82,61 +82,58 @@
                     //                 </div>
                     //             </div>`)
                                 
-                        const main_col = document.createElement('div')
-                        main_col.classList.add('main_col', 'col-md-3', 'bg-secondary', 'm-2', 'pt-2', 'rounded-lg')
-                        
-                        const content = document.createElement('div')
-                        content.classList.add('content', 'text-center')
-                        
-                        main_col.appendChild (content)
+                    const main_col = document.createElement('div')
+                    main_col.classList.add('main_col', 'col-md-3', 'bg-secondary', 'm-2', 'pt-2', 'rounded-lg')
+                    
+                    const content = document.createElement('div')
+                    content.classList.add('content', 'text-center')
+                    
+                    main_col.appendChild (content)
 
-                        const aHref = document.createElement('a')
-                        const href = document.createAttribute('href')
-                        href.value = `page.html#${element.id}`
-                        
-                        aHref.setAttributeNode(href)
-                        aHref.classList.add('text-decoration-none')
+                    const aHref = document.createElement('a')
+                    const href = document.createAttribute('href')
+                    href.value = `page.html#${element.id}`
+                    
+                    aHref.setAttributeNode(href)
+                    aHref.classList.add('text-decoration-none')
 
-                        content.appendChild (aHref)
+                    content.appendChild (aHref)
 
-                        const movie_name = document.createElement('div')
-                        movie_name.classList.add('movie_name')
+                    const movie_name = document.createElement('div')
+                    movie_name.classList.add('movie_name')
 
-                        aHref.appendChild(movie_name)
+                    aHref.appendChild(movie_name)
 
-                        const h5 = document.createElement('h5')
-                        h5.classList.add('item')
-                        h5.innerHTML = `${element.name}`
+                    const h5 = document.createElement('h5')
+                    h5.classList.add('item')
+                    h5.innerHTML = `${element.name}`
 
-                        movie_name.appendChild(h5)
+                    movie_name.appendChild(h5)
 
-                        const movie_img = document.createElement('div')
-                        movie_img.classList.add('movie_img')
+                    const movie_img = document.createElement('div')
+                    movie_img.classList.add('movie_img')
 
-                        aHref.appendChild(movie_img)
+                    aHref.appendChild(movie_img)
 
-                        const img = document.createElement('img')
-                        const src = document.createAttribute('src')
-                        src.value = `img/${element.image}`
-                        img.setAttributeNode(src)
+                    const img = document.createElement('img')
+                    const src = document.createAttribute('src')
+                    src.value = `img/${element.image}`
+                    img.setAttributeNode(src)
 
-                        movie_img.appendChild(img)
+                    movie_img.appendChild(img)
 
-                        const more = document.createElement('div')
-                        more.classList.add('more', 'text-right')
+                    const more = document.createElement('div')
+                    more.classList.add('more', 'text-right')
 
-                        aHref.appendChild(more)
+                    aHref.appendChild(more)
 
-                        const p = document.createElement('p')
-                        p.innerText = 'სრულად'
-                        more.appendChild(p)
+                    const p = document.createElement('p')
+                    p.innerText = 'სრულად'
+                    more.appendChild(p)
 
-                        view.appendChild(main_col)
+                    view.appendChild(main_col)
 
-                        console.log(main_col)
-                });
-                // view.innerHTML = cols.map(element => element).join('')
-                
+                })                
                 
             }
 
