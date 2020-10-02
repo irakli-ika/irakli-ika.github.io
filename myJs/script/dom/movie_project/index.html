@@ -42,20 +42,18 @@
         <script src="js/filterFunction.js"></script>
         <script>
             const cols = []
+            const modal = []
 
-            // call functions
-               filterStructure()
-            // pushInCols()
-            // and call functions
-
-            
-
+            // ---- start pagination variables ----
             const pagination_element = document.querySelector('.pagination')
             const view = document.getElementById('main_row')
-            
+            // ---- end pagination variables ----
+
             let current_page = 1
             const rows = 3
 
+            // --- start display function ---- 
+            // ---- filter function 
             function display(items, view, row_per_page, page) {
                 view.innerHTML = ""
                 page--
@@ -82,6 +80,7 @@
                     //                 </div>
                     //             </div>`)
                                 
+                    // ----- start main_col structure ----
                     const main_col = document.createElement('div')
                     main_col.classList.add('main_col', 'col-md-3', 'bg-secondary', 'm-2', 'pt-2', 'rounded-lg')
                     
@@ -92,10 +91,14 @@
 
                     const aHref = document.createElement('a')
                     const href = document.createAttribute('href')
-                    href.value = `page.html#${element.id}`
+                    href.value = `#${element.name}`
                     
                     aHref.setAttributeNode(href)
-                    aHref.classList.add('text-decoration-none')
+                    aHref.classList.add('text-decoration-none', 'open_modal')
+
+                    const a_id = document.createAttribute('data-id')
+                    a_id.value = `${element.id}`
+                    aHref.setAttributeNode(a_id)
 
                     content.appendChild (aHref)
 
@@ -136,7 +139,9 @@
                 })                
                 
             }
+            // ----- end main_col structure ----
 
+            // ---- start pagination -----
             function setupPagination(items, wrapper, row_per_page) {
                 wrapper.innerHTML = ""
 
@@ -162,11 +167,43 @@
                 return createBtn
 
             }
-            
+            // ---- end pagination -----
+
+            // ---- start call function ----- 
+
+            filterStructure()
+            pushInModal()
             display(movies, view, rows, current_page)
             setupPagination(movies, pagination_element, rows)
-            
-            
+
+            // ---- end call function ----- 
+
+            // ---- start modal ----
+            modal.forEach(element => {
+                document.getElementById('main_row').insertAdjacentHTML('afterbegin', element)
+            })
+
+            document.querySelectorAll('.open_modal').forEach(e => {
+
+                    e.onclick = item => {
+                        const data_id = e.getAttribute('data-id')
+
+                        document.getElementById(data_id).style.visibility = 'visible'
+
+                    }
+            })
+
+            document.querySelectorAll('.closeModal').forEach(e => {
+
+                    e.onclick = item => {
+                        const modalWindow = document.querySelectorAll('.myModal').forEach(e => {
+
+                            e.style.visibility = 'hidden'
+                        })
+                    }
+            })
+
+
         </script>
     </body>
 </html>
