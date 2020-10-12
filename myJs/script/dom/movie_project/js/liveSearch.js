@@ -1,5 +1,5 @@
 // todo => main filter
-function filterStructure(){
+function liveSearch(){
     return document.getElementById('input').addEventListener('keyup', (e) => {
         const input = e.target.value
         const filteredCols = []
@@ -10,7 +10,7 @@ function filterStructure(){
 
                     filteredCols.push(`<div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
                                             <div class="content text-center">
-                                                <a href="page.html#${item.id}" class="text-decoration-none">
+                                                <a href="#${item.name}" class="text-decoration-none open_modal" id="${item.id}" data-id="${item.id}">
                                                     <div class="movie_name">
                                                         <h5 class="item">${item.name}</h5>
                                                     </div>
@@ -35,7 +35,7 @@ function filterStructure(){
             movies.slice(0, 3).forEach((e) => {
                 filterPromise.push(`<div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
                                     <div class="content text-center">
-                                        <a href="page.html#${e.id}" class="text-decoration-none">
+                                        <a href="#${e.name}" class="text-decoration-none open_modal" id="${e.id}  data-id="${e.id}">
                                             <div class="movie_name">
                                                 <h5 class="item">${e.name}</h5>
                                             </div>

@@ -13,8 +13,11 @@
         </div>
         <div class="wrapper mt-5">
             <div class="container">
+                <div class="modal_content">
+                    <!-- TODO:: plase for dynamic modal element-->
+                </div>
                 <div class="row justify-content-around" id="main_row" >
-                    <!-- TODO:: place for dinamic elements from JavaScript -->
+                    <!-- TODO:: place for dynamic elements from JavaScript -->
                 </div><!--? end row -->
             </div><!--? end container -->
         </div><!--? end wrapper -->
@@ -31,15 +34,15 @@
                 </nav>
             </div>
         </div><!--? end pagination elements -->
-        
+
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/sql.js"></script>
-        <script src="js/tempFunction.js"></script>
-        <script src="js/filterFunction.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/liveSearch.js"></script>
         <script>
             const cols = []
             const modal = []
@@ -64,7 +67,8 @@
                 
                 sliceItems.forEach(element => {
 
-                    // cols.push(`<div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
+                    // cols.push(`<div class="main_col_click"
+                    //             <div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
                     //                 <div class="content text-center">
                     //                     <a href="page.html#${element.id}" class="text-decoration-none">
                     //                         <div class="movie_name">
@@ -81,9 +85,10 @@
                     //             </div>`)
                                 
                     // ----- start main_col structure ----
+
                     const main_col = document.createElement('div')
                     main_col.classList.add('main_col', 'col-md-3', 'bg-secondary', 'm-2', 'pt-2', 'rounded-lg')
-                    
+
                     const content = document.createElement('div')
                     content.classList.add('content', 'text-center')
                     
@@ -95,10 +100,15 @@
                     
                     aHref.setAttributeNode(href)
                     aHref.classList.add('text-decoration-none', 'open_modal')
-
-                    const a_id = document.createAttribute('data-id')
+                    
+                    const a_id = document.createAttribute('id')
                     a_id.value = `${element.id}`
                     aHref.setAttributeNode(a_id)
+
+
+                    const a_data_id = document.createAttribute('data-id')
+                    a_data_id.value = `${element.id}`
+                    aHref.setAttributeNode(a_data_id)
 
                     content.appendChild (aHref)
 
@@ -161,7 +171,6 @@
                 createBtn.addEventListener('click', (e) => {
                     current_page = page
                     display(items, view, rows, current_page)
-                    console.log(current_page)
                 })
 
                 return createBtn
@@ -171,33 +180,37 @@
 
             // ---- start call function ----- 
 
-            filterStructure()
+            liveSearch()
             pushInModal()
+            
             display(movies, view, rows, current_page)
             setupPagination(movies, pagination_element, rows)
-
+            
             // ---- end call function ----- 
 
             // ---- start modal ----
             modal.forEach(element => {
-                document.getElementById('main_row').insertAdjacentHTML('afterbegin', element)
+                document.querySelector('.modal_content').insertAdjacentHTML('afterbegin', element)
             })
 
-            document.querySelectorAll('.open_modal').forEach(e => {
 
-                    e.onclick = item => {
-                        const data_id = e.getAttribute('data-id')
+            document.addEventListener('click', e => {
+                
+                document.querySelectorAll('.myModal').forEach(element => {
+                    
+                    const data_modal_id = element.getAttribute('data-id')
 
-                        document.getElementById(data_id).style.visibility = 'visible'
-
+                    if(e.target.id == data_modal_id) {
+                        
+                        document.getElementById(data_modal_id).style.visibility = "visible"
                     }
+                })
             })
 
-            document.querySelectorAll('.closeModal').forEach(e => {
-
+            const closeModal = document.querySelectorAll('.closeModal')
+                closeModal.forEach(e => {
                     e.onclick = item => {
                         const modalWindow = document.querySelectorAll('.myModal').forEach(e => {
-
                             e.style.visibility = 'hidden'
                         })
                     }

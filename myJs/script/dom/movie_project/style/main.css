@@ -36,3 +36,6 @@ img {
     background-color: rgba(128, 128, 128, 0.459);
     
 }
+.movie_name, .movie_img, .more{
+    pointer-events: none;
+}
