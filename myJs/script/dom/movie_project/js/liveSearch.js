@@ -35,7 +35,7 @@ function liveSearch(){
             movies.slice(0, 3).forEach((e) => {
                 filterPromise.push(`<div class="main_col col-md-3 bg-secondary m-2 pt-2 rounded-lg">
                                     <div class="content text-center">
-                                        <a href="#${e.name}" class="text-decoration-none open_modal" id="${e.id}  data-id="${e.id}">
+                                        <a href="#${e.name}" class="text-decoration-none open_modal" id="${e.id}" data-id="${e.id}">
                                             <div class="movie_name">
                                                 <h5 class="item">${e.name}</h5>
                                             </div>
