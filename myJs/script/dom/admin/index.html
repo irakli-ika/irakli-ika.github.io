@@ -13,87 +13,109 @@
         </style>
     </head>
     <body>
-        <form onsubmit="getData(event)">
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleInputName">name</label>
-                    <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleInputCountry">country</label>
-                    <input type="country" class="form-control" id="inputCountry" aria-describedby="countryHelp">
-                </div>
+        <!-- add button -->
+        <div class="addBtn">
+            <div class="addBtn_container py-3 pl-4">
+                <div class="btn bg-success text-white font-weight-bold clickAdd">Add Movies</div>
             </div>
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleInputDescription">description</label>
-                    <input type="description" class="form-control" id="inputDescription" aria-describedby="descriptionHelp">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleInputDirector">director</label>
-                    <input type="director" class="form-control" id="inputDirector" aria-describedby="directorHelp">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleInputGenre">genre</label>
-                    <input type="genre" class="form-control" id="inputGenre">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleInputYear">year</label>
-                    <input type="year" class="form-control" id="inputYear">
-                </div>
-            </div>
-            <div class="form-group col-2">
-                <input type="submit" value="Submit">
-            </div>
+        </div>
+
+        <!-- submit form -->
+        <form onsubmit="getData(event)" class="submitForm display">
+            <div class="row submit_form_row">
+                <div class="col submit_form_col">
+                    <div class="container submit_form_container">
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleInputName">name</label>
+                                <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleInputCountry">country</label>
+                                <input type="country" class="form-control" id="inputCountry" aria-describedby="countryHelp">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleInputDescription">description</label>
+                                <input type="description" class="form-control" id="inputDescription" aria-describedby="descriptionHelp">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleInputDirector">director</label>
+                                <input type="director" class="form-control" id="inputDirector" aria-describedby="directorHelp">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleInputGenre">genre</label>
+                                <input type="genre" class="form-control" id="inputGenre">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleInputYear">year</label>
+                                <input type="year" class="form-control" id="inputYear">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2 text-center">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div><!-- end submit_form_container -->
+                </div><!-- end submit_form_col -->
+            </div><!-- end submit_form_row -->
         </form>
-
-        <!-- todo: => edit form -->
-
-        <form onsubmit="editData(event)" class="display">
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleEditName">name</label>
-                    <input type="name" class="form-control" id="editName" aria-describedby="nameHelp">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleEditCountry">country</label>
-                    <input type="country" class="form-control" id="editCountry" aria-describedby="countryHelp">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleEditDescription">description</label>
-                    <input type="description" class="form-control" id="editDescription" aria-describedby="descriptionHelp">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleEditDirector">director</label>
-                    <input type="director" class="form-control" id="editDirector" aria-describedby="directorHelp">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="exampleEditGenre">genre</label>
-                    <input type="genre" class="form-control" id="editGenre">
-                </div>
-                <div class="form-group col-2">
-                    <label for="exampleEditYear">year</label>
-                    <input type="year" class="form-control" id="editYear">
-                </div>
-            </div>
-            <div class="form-group col-2">
-                <input type="submit" value="Edit">
-            </div>
+                
+        <!-- edit form -->
+        <form onsubmit="editData(event)" class="editForm display">
+            <div class="row edit_form_row">
+                <div class="col edit_form_col">
+                    <div class="container edit_form_container">
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleEditName">name</label>
+                                <input type="name" class="form-control" id="editName" aria-describedby="nameHelp">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleEditCountry">country</label>
+                                <input type="country" class="form-control" id="editCountry" aria-describedby="countryHelp">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleEditDescription">description</label>
+                                <input type="description" class="form-control" id="editDescription" aria-describedby="descriptionHelp">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleEditDirector">director</label>
+                                <input type="director" class="form-control" id="editDirector" aria-describedby="directorHelp">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2">
+                                <label for="exampleEditGenre">genre</label>
+                                <input type="genre" class="form-control" id="editGenre">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="exampleEditYear">year</label>
+                                <input type="year" class="form-control" id="editYear">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-2 text-center">
+                                <input type="submit" value="Edit">
+                            </div>
+                        </div>
+                    </div><!-- end edit_form_container -->
+                </div><!-- end edit_form_col -->
+            </div><!-- end edit_form_row -->
         </form>
-
-        <!-- todo: => start section -->
+                
+        <!-- start section -->
         <section class="inner">
             <div class="row inner_row justify-content-center">
 
             </div>
         </section>
-
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

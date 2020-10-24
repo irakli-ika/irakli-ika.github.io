@@ -9,7 +9,7 @@ function submitedStruct() {
                     <p class="desc">${element.description}</p>
                 </div>
                 <div class="row">
-                    <div class="edit btn btn-info mr-3" data-name="edit"  id="${element.id}" onclick="editElement('${element.id}')">Edit</div>
+                    <div class="edit btn btn-info mx-3" data-name="edit"  id="${element.id}" onclick="editElement('${element.id}')">Edit</div>
                     <div class="remove btn btn-danger" data-name="remove" id="${element.id}" onclick="removeElement('${element.id}')">Remove</div>
                 </div>
             </div>`).join(''))
