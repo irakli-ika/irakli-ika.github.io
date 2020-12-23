@@ -1,0 +1,38 @@
+{
+    "movies": [
+        {
+            "id": "5f485c1l44c13",
+            "title": "",
+            "country_id": "countries.id",
+            "language_id": "languages.id",
+            "director_id": "directors.id",
+            "genre_id": "genres.id"
+        }
+    ],
+    "countries": [
+        {
+            "id":"5f415c1l94c98",
+            "country": ""
+        }
+    ],
+    "languages": [
+        {
+            "id":"5f495c1l92c09",
+            "language": ""
+        }
+    ],
+    "directors": [
+        {
+            "id": "5f485c1l44q64",
+            "name": "",
+            "lastName": "",
+            "age": ""
+        }
+    ],
+    "genres": [
+        {
+            "id":"5f485c6344q64",
+            "genre": ""
+        }
+    ]
+}

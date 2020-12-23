@@ -52,6 +52,14 @@ function getData(e) {
 function removeElement(id) {
      movies = movies.filter((e) => e.id != id)
      submitedStruct()
+
+     // submit form display none
+     submitForm.style.display = `none`
+     // end submit form display
+
+     // edit form display
+     editForm.style.display = 'none'
+     // end edit form display
 }
 
 // start edit function

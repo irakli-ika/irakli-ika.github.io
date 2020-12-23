@@ -1,0 +1,8 @@
+.header__container {
+    background-color: hsl(239, 47%, 20%);
+}
+.title img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}

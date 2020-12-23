@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!--* კომენტარი -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" /> <!--todo: კოდირების მინიჭება ვებ გვერდისთვის -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Inria+Serif&display=swap');
+        </style>
+        <title>Document -> 17/02/2020</title> 
+  
+    </head>
+    <body>
+    <!--? ფორმის ელემენტები  -->
+    <!--! inline-block -->
+    <!--todo: https://www.w3schools.com/html/html_form_input_types.asp -->
+    <!--todo: https://www.w3schools.com/tags/tag_input.asp-->
+    <!--* <input type="default(text)" /> -->
+    <!--* required ="required" === (required) autofocus="autofocus" ===(autofocus) -->
+    <!--! disabled ატრიბუტის მქონე ველები არ გადაეცემა სერვერს -->
+    <form>
+        <input type="text" 
+                name="user_name"
+                value="default value"
+                placeholder="Enter User Name"
+                class="input" 
+                minlength="2"
+                maxlength="30"
+                required autofocus readonly />  -->
+    <input type="number" 
+                value="10"
+                min="0"
+                step="5"
+                max="100"
+                name="user_name"
+                placeholder="Enter User Name"
+                class="input" 
+                required /> 
+<input type="email" 
+                name="user_name"
+                placeholder="Enter Your Email"
+                class="input" 
+                minlength="10"
+                required /> 
+
+<input type="password" 
+                name="user_name"
+                placeholder="Enter Your password"
+                class="input" 
+                minlength="10"
+                required /> 
+<input type="hidden" 
+                name="user_name"
+                placeholder="Enter Your password"
+                class="input" 
+                minlength="10"
+                required /> 
+
+<!-- <input type="date" 
+                name="date"
+                placeholder="dd/mm/yyyy"
+                class="input" 
+                minlength="10"
+                required /> 
+
+        <input type="submit" value="Send" class="input" />
+        <input type="reset" value="Clear" class="input" /> -->
+<!-- <input type="range" onchange="console.log(document.querySelector(`#result`).innerHTML = this.value)"
+                value="10"
+                min="0"
+                step="5"
+                max="100"
+                name="user_name"
+                placeholder="Enter User Name"
+                class="input" 
+                required /> <span id="result" style="color:aliceblue; font-size: 30px;"></span>
+<!-- <input type="file" multiple
+                name="file"
+                class="input" 
+                required /> -->
+    </form>
+
+    <button onclick="console.log(Math.floor(Math.random() * 100))">Radmom</button>
+    
+    <!--* https://fengyuanchen.github.io/datepicker/ -->
+    <!--* https://refreshless.com/nouislider/ -->
+    </body>
+</html>

@@ -39,3 +39,13 @@ section,
 .filterContainer .row div:hover {
     cursor: pointer;
 }
+/* 
+.frontEffects_left {
+    transform: scale(1.05, 1.05) translateX(-10px);
+}
+.frontEffects_right {
+    transform: scale(1.05, 1.05) translateX(10px);
+}
+.backEffects {
+    opacity: .8;
+} */

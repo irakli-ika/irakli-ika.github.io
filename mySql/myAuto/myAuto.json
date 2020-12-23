@@ -1,0 +1,42 @@
+{
+    "cars" : [
+        {
+            "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+            "transaction_type": ["იყიდება","ქირავდება"],
+            "manufacturer_id": "manufacturers.id",
+            "model_id": "models.id",
+            "year": "",
+            "price": "",
+            "engine_id": "engines.id",
+            "vin": "",
+            "transmission_id": "transmissions.id",
+            "fuel_type_id": "fuel_types.id",
+            "custom": ["განბაჟებული","განუბაჟებელი"],
+            "wheel":  ["მარჯვენა","მარცხენა"],
+            "location_id": "locations.id"
+
+        }
+    ],
+    "manufacturers": [{
+        "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+        "title": ""
+    }],
+    "models": [{
+        "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+        "title": "",
+        "manufacturer_id": "manufacturers.id"
+    }],
+    "engine": [{
+        "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+        "title": ""
+    }],
+    "transmissions": [{
+        "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+        "title": ""
+    }],
+    "fuel_types": [{
+        "id": "cd22cad7-6871-469c-846c-cf24e9989a93",
+        "title": ""
+    }]
+
+}

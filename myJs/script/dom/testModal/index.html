@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Document</title>
+        <style>
+            .myModal {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1050;
+                visibility: hidden;
+                overflow: hidden;
+                outline: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="active-cyan-4 mb-5 col-md-4 mx-auto">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>    
+        </header>
+        <section>
+            <div class="container">
+                <div class="modalWindow" id="test">
+                    
+                </div>
+                <div class="row main_row">
+                    <!-- <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/burti_moedani.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div> -->
+                </div>
+                
+        </section>
+        
+
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="sql.js"></script>
+        <script src="template.js"></script>
+        <script src="modal.js"></script>
+        <script>
+            const col = []
+            const modal = []
+            
+            
+            
+            mainStructure()
+            modalStructure()
+            liveSearch()
+
+
+            function liveSearch() {
+                document.querySelector('.form-control').addEventListener('keyup', e => {
+                    const input = e.target.value
+                    const searchResult = []
+
+                        movies.filter(item => {
+                            if((item.name).includes(input)) {
+                                searchResult.push(`<div class="col checkId">
+                                                        <div class="card" style="width: 18rem;">
+                                                            <img class="card-img-top" src="img/${item.image}" alt="Card image cap">
+                                                            <div class="card-body">
+                                                            <h5 class="card-title">${item.name}</h5> 
+                                                            <a href="#${item.name}" class="btn btn-primary" data-id="${item.id}" id="${item.id}">სრულად</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>`)
+                            }
+                        })
+                        document.querySelector('.main_row').innerHTML = searchResult.map(e => e).join('')
+                    
+                })
+
+            }
+
+            document.querySelector('.main_row').innerHTML = col.map(e => e).join('')
+
+            // ------------- modal elements 
+            modal.forEach(element => {
+                document.querySelector('.modalWindow').insertAdjacentHTML('afterbegin', element)                
+            })
+
+            document.addEventListener('click', e => {
+                $modal = document.querySelectorAll('.myModal')
+
+                $modal.forEach(element => {
+                    const data_modal_id = element.getAttribute('data-modalId')
+
+                    if(e.target.id == data_modal_id) {
+                        
+                        document.getElementById(data_modal_id).style.visibility = "visible"
+                    }
+                })
+            })
+
+            const closeModal = document.querySelectorAll('.closeModal')
+                closeModal.forEach(e => {
+                    e.onclick = item => {
+                        const modalWindow = document.querySelectorAll('.myModal').forEach(e => {
+                            e.style.visibility = 'hidden'
+                        })
+                    }
+            })
+            
+        </script>
+    
+    </body>
+</html>

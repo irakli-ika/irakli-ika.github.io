@@ -1,0 +1,38 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+/* end import files */
+
+body {
+    background-image: url("../image/background.jpg");
+}
+a {
+    color: hsl(0, 0%, 100%);
+}
+.container {
+    background: hsl(0 0% 45%);
+}
+.page__header {
+    font-size: 3rem;
+    font-family: 'DM Serif Text', serif;
+}
+.btn {
+    border-radius: 0;
+}
+.nav__col {
+    border-right: .1rem solid black;
+    background-color: hsl(0, 0%, 74%);
+}
+.nav__col:first-child {
+    border-radius: .7rem 0 0 .7rem;
+}
+.nav__col:last-child {
+    border-radius: 0 .7rem .7rem 0;
+    border: 0;
+}
+.nav__col:hover {
+    background-color: hsl(0, 0%, 63%);
+}
+.post__col--desc p {
+    font-size: 1rem;
+    text-indent: 1.5rem;
+}

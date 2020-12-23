@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+        .banner_container_row_col {
+            position: relative;
+            text-align: center;
+            padding: 10rem 3rem 8rem;
+        }
+        .banner_image::before {
+            content: "";
+            position: absolute;
+            background-image: url(images/overlay.png),
+                    url(images/overlay.png),
+                    linear-gradient(45deg, hsl(257, 100%, 75%), hsl(6, 100%, 76%));
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .7;
+        }
+        .banner_image {
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .banner_text_content > h1 {
+            font-weight: 900;
+            font-size: 3.25rem;
+            line-height: 1.25;
+            margin: 0 0 2rem 0;
+            color: hsl(0, 0%, 100%);
+        }
+    </style>
+    <body>
+        <div class="banner">
+            <div class="container banner_container">
+                <div class="row banner_container_row">
+                    <div class="col banner_container_row_col">
+                       <div class="banner_image">
+                           <img src="img/banner.jpg" alt="">
+                        </div>
+                        <div class="banner_content">
+                            <div class="banner_text_content">
+                                <h1>MAGNA ETIAM LOREM SED TEMPUS ADIPISCING</h1>
+                            </div>
+                            <div class="banner_btn_content">
+                                <a href="" class="btn">Get Started</a>
+                            </div>
+                        </div>
+                    </div><!--? end banner_container_row_col -->
+                </div><!--? end row banner_container_row -->
+            </div><!--? end container banner_container -->
+        </div><!--? end banner -->
+    </body>
+</html>

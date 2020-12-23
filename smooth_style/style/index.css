@@ -16,6 +16,7 @@ html {
 }
 .row {
     display: flex;
+    justify-content: center;
 }
 
 a {
@@ -25,10 +26,6 @@ a {
     font-size: 30px;
     color: rgb(0, 0, 0);
     text-transform: capitalize;
-}
-
-.nav .col a:hover {
-    
 }
 .nav .col:nth-child(1) a {
     background-color: rgba(255, 0, 0, 0.699);
@@ -66,7 +63,14 @@ a {
     background-color: rgba(128, 0, 128, 0.788);
 }
 
-
+.section-red:target ~ .nav a[href="#sec-red"],
+.section-green:target ~ .nav a[href="#sec-green"],
+.section-blue:target ~ .nav a[href="#sec-blue"],
+.section-orange:target ~ .nav a[href="#sec-orange"],
+.section-purple:target ~ .nav a[href="#sec-purple"] {
+    /* clip-path: polygon(100% 70%, 50% 100%, 0 70%, 0 10%, 50% 30%, 100% 10%); */
+    clip-path: polygon(50% 100%, 0 25%, 100% 25%);
+}
 .section-red:target ~ .nav a[href="#sec-red"] {
     color:white;
 }
@@ -74,15 +78,15 @@ a {
     color:white;
 }
 
-.section-red:target ~ .nav a[href="#sec-red"] {
+.section-blue:target ~ .nav a[href="#sec-blue"] {
     color:white;
 }
 
-.section-red:target ~ .nav a[href="#sec-red"] {
+.section-orange:target ~ .nav a[href="#sec-orange"] {
     color:white;
 }
 
-.section-red:target ~ .nav a[href="#sec-red"] {
+.section-purple:target ~ .nav a[href="#sec-purple"] {
     color:white;
 }
 

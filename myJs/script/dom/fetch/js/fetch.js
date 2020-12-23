@@ -4,43 +4,52 @@
     
 //     // .then(response =>  console.log(response))
 
+
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(data =>  {
         document.querySelector('.fetch-row').innerHTML = data.map((item) => {
-            return `<div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">${item.title}</h5>
-                                <p class="card-text">${item.body}</p>
-                                <a href="#${item.id}" class="btn btn-primary click" data-func='click'>Go somewhere</a>
-                            </div>
-                        </div>
-                    </div> `
+            return mainItem.fetch_col(item)
         }).join('')
-        
-        data.map((item) => {
-            fetch(`https://jsonplaceholder.typicode.com/posts/${item.id}`)
-                .then(response => response.json())
-                .then(data => {
-                    document.querySelector('.click').addEventListener('click', (e) => {
 
-                        document.querySelector('.modalContainer').classList.add('modalBox')
-                        document.querySelector('.modalContainer').classList.remove('modalBoxRm')
+        document.querySelectorAll('.view-more').forEach((e) => {
+            e.addEventListener('click', (e) => {
+                const id = e.target.getAttribute('data-id')
+                fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+                    .then(res => res.json())
+                    .then((item) => {
+                        document.querySelector('.card-title--view').innerHTML = item.title
+                        document.querySelector('.card-text--view').innerHTML = item.body
+                        document.getElementById('open-view').click()
                     })
-                    
+            })
+        })
+    });
+
+
+document.getElementById('search').addEventListener('keyup', (e) => {
+    const search = e.target.value
+    const row = document.querySelector('.fetch-row')
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => {
+            
+            const filtred = data.filter((item) => item.title.includes(search))
+            row.innerHTML = (filtred.length > 0) ? filtred.map((item) => {
+                return mainItem.fetch_col(item)
+            }).join('') : mainItem.alert(e)
+
+            document.querySelectorAll('.view-more').forEach((e) => {
+                e.addEventListener('click', (e) => {
+                    const id = e.target.getAttribute('data-id')
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+                        .then(res => res.json())
+                        .then((item) => {
+                            document.querySelector('.card-title--view').innerHTML = item.title
+                            document.querySelector('.card-text--view').innerHTML = item.body
+                            document.getElementById('open-view').click()
+                        })
                 })
             })
-        document.querySelector('.modal-fetch-row').innerHTML = data.map((item) => {
-            return `<div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">${item.title}</h5>
-                                <p class="card-text">${item.body}</p>
-                                <a href="https://jsonplaceholder.typicode.com/posts/${item.id}" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>`
-        }).join('')
-    })
-    
+        });
+})

@@ -1,0 +1,23 @@
+{
+    "icons": [
+        {
+            "instagram" : "https://fontawesome.com/icons/instagram?style=brands",
+            "twitter" : "https://fontawesome.com/icons/twitter?style=brands",
+            "facebook" : "https://fontawesome.com/icons/facebook-f?style=brands",
+            "phone" : "https://fontawesome.com/icons/phone?style=solid",
+            "envelope" : "https://fontawesome.com/icons/envelope?style=solid",
+            "camera" : "https://fontawesome.com/icons/camera-retro?style=solid",
+            "gem" : "https://fontawesome.com/icons/gem?style=regular",
+            "chart" : "https://fontawesome.com/icons/chart-bar?style=regular",
+            "rss" : "https://fontawesome.com/icons/rss?style=solid",
+            "comment-dots" : "https://fontawesome.com/icons/comment-dots?style=regular",
+            "copy" : "https://fontawesome.com/icons/copy?style=regular",
+            "next-arrow" : "https://fontawesome.com/icons/long-arrow-alt-right?style=solid"
+        }
+    ],
+    "fonts" : [
+        {
+            "font-family" : "Source Sans Pro, Helvetica, sans-serif"
+        }
+    ]
+}

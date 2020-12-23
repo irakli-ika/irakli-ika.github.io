@@ -1,0 +1,8 @@
+@import 'reset.css';
+
+
+.box {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightblue;
+}

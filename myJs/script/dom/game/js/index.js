@@ -54,7 +54,6 @@ document.querySelector('.addItems').innerHTML = randomNum.map((item) => {
             </div>`
            
 }).join('')
-
 function startGame() {
     document.querySelectorAll('.items').forEach((item) => {
         item.addEventListener("click", (e) => {
